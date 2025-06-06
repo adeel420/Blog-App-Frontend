@@ -1,0 +1,91 @@
+.createBlogs{
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+.createBlogs .title{
+    text-align: center;
+    color: #ee6545;
+    font-weight: bold;
+}
+.createBlogs .createForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px 0;
+    margin-top: 30px;
+}
+.createBlogs .createForm .select{
+    width: 600px;
+    border: 2px solid #ee6545;
+    padding:0px;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.createBlogs .createForm label{
+    width: 600px;
+    border: 2px solid #ee6545;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    outline: 0;
+    color: #ee6545;
+    border-radius: 5px;
+}
+.createBlogs .createForm label:hover{
+    background-color: #ee6545;
+    color: white;
+}
+.createBlogs .createForm input{
+    width: 600px;
+    border: 2px solid #ee6545;
+    font-size: 18px;
+    padding: 6px;
+    outline: 0;
+    border-radius: 5px;
+}
+.createBlogs .createForm .textarea{
+    width: 600px;
+    border: 2px solid #ee6545;
+    font-size: 18px;
+    padding: 6px;
+    outline: 0;
+    height: 200px;
+    position: relative;
+    border-radius: 5px;
+}
+.createBlogs .createForm .textarea textarea{
+    width: 580px;
+    border: none;    
+    resize: none;
+    outline: 0;
+}
+.createBlogs .createForm .textarea button{
+    position: absolute;
+    right: 15px;
+    background-color: #ee6545;
+    font-size: 16px;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    bottom: 15px;
+}
+.createBlogs .createForm .textarea button:hover{
+    background-color: #ca553b;
+}
+.createBlogs .createForm .submit{
+    background-color: #ee6545;
+    font-size: 18px;
+    padding: 8px;
+    color: white;
+    width: 600px;
+    border: none;
+    border-radius: 10px;
+}
+.createBlogs .createForm .submit:hover{
+    background-color: #ca553b;
+}

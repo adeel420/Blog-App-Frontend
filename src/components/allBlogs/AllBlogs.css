@@ -1,0 +1,28 @@
+.allBlogs{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+.allBlogs .title{
+    color: #ee6545;
+    text-align: center;
+    font-weight: bold;
+}
+.allBlogs .card-cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 40px;
+    margin-top: 50px;
+}
+.allBlogs .card-cont .card .card-body{
+    background-color: #fbf3ea;
+}
+.allBlogs .card-cont .card img{
+    height: 25rem;
+    width: 30rem;
+}
+.allBlogs .card-cont .card .card-title{
+    font-size: 26px;
+}

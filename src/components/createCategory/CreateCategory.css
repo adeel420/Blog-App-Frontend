@@ -1,0 +1,111 @@
+.createCategory{
+    margin-top: 30px;
+}
+.createCategory .title{
+    text-align: center;
+    color: #ee6545;
+    font-weight: bold;
+}
+.createCategory .createForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.createCategory .createForm input{
+    width: 300px;
+    border: 2px solid #ee6545;
+    font-size: 18px;
+    padding: 6px;
+    outline: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.createCategory .createForm input::placeholder{
+    color: gray;
+}
+.createCategory .createForm button{
+    background-color: #ee6545;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 7.5px;
+    padding-right: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.createCategory .createForm button:hover{
+    background-color: #bc4f36;
+}
+.createCategory .table-cont{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.createCategory .table-cont table{
+    width: 600px;
+}
+.createCategory .popup-container{
+    background-color: rgba(0, 0, 0, 0.548);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.createCategory .popup-container .popup{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 15px;
+    width: 400px;
+    border-radius: 5px;
+}
+.createCategory .popup-container .popup h4{
+    text-align: center;
+    color: #ee6545;
+    font-weight: bold;
+}
+.createCategory .popup-container .popup .times{
+    background-color: #ee6545;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    font-size: 22px;
+    color: white;
+    border-radius: 4px;
+}
+.createCategory .popup-container .popup .times:hover{
+    background-color: #bc4f36;
+}
+.createCategory .popup-container .popup form{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.createCategory .popup-container .popup form input{
+    border: 2px solid #ee6545;
+    width: 250px;
+    font-size: 18px;
+    padding: 6px;
+    outline: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.createCategory .popup-container .popup form button{
+    background-color: #ee6545;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 7.5px;
+    padding-right: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

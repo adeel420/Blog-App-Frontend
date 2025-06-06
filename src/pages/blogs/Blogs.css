@@ -1,0 +1,660 @@
+.blogs-cont{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    position: fixed;
+}
+.blogs-cont .title{
+    text-align: center;
+    color: #ee6545;
+    font-size: 36px;
+    font-weight: bold;
+}
+.blogs-cont .flex-container{
+    display: flex;
+    gap: 0px 20px;
+    margin-top: 30px;
+}
+.blogs-cont .flex-container .cont{
+    width: 100%;
+    overflow-y: scroll;
+    height: 70vh;
+    padding-right: 230px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+.blogs-cont .flex-container .cont::-webkit-scrollbar{
+    width: 15px;
+  }
+  .blogs-cont .flex-container .cont::-webkit-scrollbar-track{
+    border-radius: 40px;
+    background-color: #fbf3ea;
+  }
+  .blogs-cont .flex-container .cont::-webkit-scrollbar-thumb{
+    background-color: #ee6545;
+    border-radius: 40px;
+  }
+.blogs-cont .cont .card .card-body{
+    background-color: #fbf3ea;
+}
+.blogs-cont .cont .card .card-body .card-title{
+    font-size: 26px;
+}
+.blogs-cont .cont .none{
+    color: gray;
+    text-align: center;
+}
+.blogs-cont .flex-container .featured{
+    width: 100%;
+}
+.blogs-cont .flex-container .featured form input{
+    width: 100%;
+    padding: 6px;
+    font-size: 18px;
+    border: 2px solid #ee6545;
+    outline: 0;
+    border-radius: 5px;
+}
+.blogs-cont .flex-container .featured h3{
+    border-bottom: 3px solid #ee6545;
+    margin-top: 30px;
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+.blogs-cont .flex-container .featured .post-cont{
+    border-bottom: 1px solid gray;
+}
+.blogs-cont .flex-container .featured .post-cont .flex{
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    margin-top: -10px;
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2560px){
+    .blogs-cont{
+        margin-top: 30px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 40px;
+        position: fixed;
+        width: 100%;
+    }
+    .blogs-cont .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 52px !important;
+        font-weight: bold;
+    }
+    .blogs-cont .flex-container{
+        display: flex;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .blogs-cont .flex-container .cont{
+        width: 100%;
+        overflow-y: scroll;
+        height: 100vh;
+        padding-right: 230px;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .blogs-cont .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .blogs-cont .cont .card{
+        width: 80rem !important;
+      }
+    .blogs-cont .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .blogs-cont .cont .card .card-body .card-title{
+        font-size: 52px !important;
+    }
+    .blogs-cont .cont .card .card-body .card-text{
+        font-size: 32px !important;
+    }
+    .blogs-cont .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .blogs-cont .flex-container .featured{
+        width: 100% !important;
+        margin-right: 50px;
+    }
+    .blogs-cont .flex-container .featured form input{
+        width: 90%;
+        padding: 10px;
+        font-size: 32px;
+        border: 2px solid v#ee6545;
+        outline: 0;
+        border-radius: 10px;
+    }
+    .blogs-cont .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 80px;
+        font-size: 36px;
+        padding-bottom: 10px;
+    }
+    .blogs-cont .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .blogs-cont .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1800px){
+    .blogs-cont{
+        margin-top: 30px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .blogs-cont .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .blogs-cont .flex-container{
+        display: flex;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .blogs-cont .flex-container .cont{
+        width: 100%;
+        overflow-y: scroll;
+        height: 70vh;
+        padding-right: 230px;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .blogs-cont .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+    .blogs-cont .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .blogs-cont .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .blogs-cont .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .blogs-cont .flex-container .featured{
+        width: 100%;
+    }
+    .blogs-cont .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .blogs-cont .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .blogs-cont .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .blogs-cont .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .blogs-cont{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .blogs-cont .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .blogs-cont .flex-container{
+        display: flex;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .blogs-cont .flex-container .cont{
+        width: 100%;
+        overflow-y: scroll;
+        height: 850px;
+        padding-right: 100px;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .blogs-cont .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .blogs-cont .cont .card{
+        width: 30rem !important;
+      }
+    .blogs-cont .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .blogs-cont .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .blogs-cont .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .blogs-cont .flex-container .featured{
+        width: 100%;
+    }
+    .blogs-cont .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .blogs-cont .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .blogs-cont .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .blogs-cont .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .blogs-cont{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .blogs-cont .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .blogs-cont .flex-container{
+        display: flex;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .blogs-cont .flex-container .cont{
+        width: 100%;
+        overflow-y: scroll;
+        height: 70vh;
+        padding-right: 60px;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .blogs-cont .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .blogs-cont .cont .card{
+        width: 20rem !important;
+      }
+    .blogs-cont .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .blogs-cont .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .blogs-cont .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .blogs-cont .flex-container .featured{
+        width: 100%;
+    }
+    .blogs-cont .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .blogs-cont .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .blogs-cont .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .blogs-cont .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .blogs-cont{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .blogs-cont .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .blogs-cont .flex-container{
+        display: flex;
+        flex-direction: column-reverse !important;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .blogs-cont .flex-container .cont{
+        width: 100%;
+        margin-top: 50px !important;
+        overflow-y: scroll;
+        height: 45vh;
+        padding-right: 0px !important;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .blogs-cont .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .blogs-cont .cont .card{
+        width: 20rem !important;
+      }
+    .blogs-cont .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .blogs-cont .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .blogs-cont .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .blogs-cont .flex-container .featured{
+        width: 100%;
+    }
+    .blogs-cont .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .blogs-cont .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .blogs-cont .flex-container .featured .div{
+        display: none !important;
+    }
+    .blogs-cont .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .blogs-cont .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .blogs-cont{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .blogs-cont .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .blogs-cont .flex-container{
+        display: flex;
+        flex-direction: column-reverse !important;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .blogs-cont .flex-container .cont{
+        width: 100%;
+        margin-top: 50px !important;
+        overflow-y: scroll;
+        height: 45vh;
+        padding-right: 0px !important;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .blogs-cont .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .blogs-cont .cont .card{
+        width: 18rem !important;
+      }
+    .blogs-cont .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .blogs-cont .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .blogs-cont .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .blogs-cont .flex-container .featured{
+        width: 100%;
+    }
+    .blogs-cont .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .blogs-cont .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .blogs-cont .flex-container .featured .div{
+        display: none !important;
+    }
+    .blogs-cont .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .blogs-cont .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .blogs-cont{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .blogs-cont .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .blogs-cont .flex-container{
+        display: flex;
+        flex-direction: column-reverse !important;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .blogs-cont .flex-container .cont{
+        width: 100%;
+        margin-top: 50px !important;
+        overflow-y: scroll;
+        height: 45vh;
+        padding-right: 0px !important;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .blogs-cont .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .blogs-cont .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .blogs-cont .cont .card{
+        width: 15rem !important;
+      }
+    .blogs-cont .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .blogs-cont .cont .card .card-body .card-title{
+        font-size: 22px;
+    }
+    .blogs-cont .cont .card .card-body .card-{}
+    .blogs-cont .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .blogs-cont .flex-container .featured{
+        width: 100%;
+    }
+    .blogs-cont .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .blogs-cont .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .blogs-cont .flex-container .featured .div{
+        display: none !important;
+    }
+    .blogs-cont .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .blogs-cont .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}

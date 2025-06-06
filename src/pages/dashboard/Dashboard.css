@@ -1,0 +1,22 @@
+.dashboard-cont{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.dashboard-cont .btn-container .button{
+    display: flex;
+    justify-content: space-around;
+    gap: 0px 10px;
+}
+.dashboard-cont .btn-container .button button{
+    background-color: #ee6545;
+    color: white;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+.dashboard-cont .btn-container .button button:hover{
+    background-color: #cb553a;
+}

@@ -1,0 +1,98 @@
+.updateBlogs{   
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+.updateBlogs .title{
+    color: #ee6545;
+    text-align: center;
+    font-weight: bold;
+}
+.updateBlogs .createForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px 0;
+    margin-top: 30px;
+}
+.updateBlogs .createForm .select{
+    width: 600px;
+    border: 2px solid #ee6545;
+    padding:0px;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.updateBlogs .createForm label{
+    width: 600px;
+    border: 2px solid #ee6545;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    outline: 0;
+    color: #ee6545;
+    border-radius: 5px;
+}
+.updateBlogs .createForm label:hover{
+    background-color: #ee6545;
+    color: white;
+}
+.updateBlogs .createForm input{
+    width: 600px;
+    border: 2px solid #ee6545;
+    font-size: 18px;
+    padding: 6px;
+    outline: 0;
+    border-radius: 5px;
+}
+.updateBlogs .createForm .textarea{
+    width: 600px;
+    border: 2px solid #ee6545;
+    font-size: 18px;
+    padding: 6px;
+    outline: 0;
+    height: 200px;
+    position: relative;
+    border-radius: 5px;
+}
+.updateBlogs .createForm .textarea textarea{
+    width: 580px;
+    border: none;    
+    resize: none;
+    outline: 0;
+}
+.updateBlogs .createForm .textarea button{
+    position: absolute;
+    right: 15px;
+    background-color: #ee6545;
+    font-size: 16px;
+    padding: 8px;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    bottom: 15px;
+}
+.updateBlogs .createForm .textarea button:hover{
+    background-color: #ca553b;
+}
+.updateBlogs .createForm .submit{
+    background-color: #ee6545;
+    font-size: 18px;
+    padding: 8px;
+    color: white;
+    width: 600px;
+    border: none;
+    border-radius: 10px;
+}
+.updateBlogs .createForm .submit:hover{
+    background-color: #ca553b;
+}
+.updateBlogs .delete{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    margin-top: 15px;
+}

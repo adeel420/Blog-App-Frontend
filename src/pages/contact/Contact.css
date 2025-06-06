@@ -1,0 +1,147 @@
+.contact-cont{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    min-height: 80vh;
+}
+.contact-cont .title{
+    text-align: center;
+    color: #ee6545;
+    font-weight: bold;
+}
+.contact-cont .hero-section{
+    background-color: #fbf3ea;
+    height: 80vh;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+}
+.contact-cont .hero-section .title{
+    color: #ee6545;
+    font-size: 36px;
+    font-weight: bold;
+}
+.contact-cont .hero-section p{
+    color: gray;
+    width: 800px;
+    text-align: center;
+}
+.contact-cont .flex-container{
+    display: flex;
+    margin-top: 50px;
+    gap: 0px 100px;
+}
+.contact-cont .flex-container .text h3{
+    color: #ee6545;
+    font-weight: bold;
+}
+.contact-cont .flex-container .text .cont{
+    margin-top: 30px;
+}
+.contact-cont .flex-container .text .cont label{
+    font-weight: bold;
+    font-size: 20px;
+}
+.contact-cont .flex-container .text .cont p{
+    font-size: 20px;
+    margin-top: 10px;
+    display: flex;
+    gap: 0px 20px;
+    margin-left: 60px;
+}
+.contact-cont .flex-container .text .cont p span{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2560px){
+    .contact-cont{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .contact-cont .title{
+        font-size: 70px !important;
+    }
+    .contact-cont .hero-section{
+        margin-top: 35px;
+        display: flex;
+    }
+    .contact-cont .hero-section .title{
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .contact-cont .hero-section p{
+        font-size: 42px;
+        width: 1400px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1800px){
+    .contact-cont{
+        margin-top: 30px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        min-height: 80vh;
+    }
+    .contact-cont .title{
+        text-align: center;
+        color: #ee6545;
+        font-weight: bold;
+    }
+    .contact-cont .hero-section{
+        background-color: #fbf3ea;
+        height: 80vh;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    .contact-cont .hero-section .title{
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .contact-cont .hero-section p{
+        color: gray;
+        width: 800px;
+        text-align: center;
+    }
+    .contact-cont .flex-container{
+        display: flex;
+        margin-top: 50px;
+        gap: 0px 100px;
+    }
+    .contact-cont .flex-container .text h3{
+        color: #ee6545;
+        font-weight: bold;
+    }
+    .contact-cont .flex-container .text .cont{
+        margin-top: 30px;
+    }
+    .contact-cont .flex-container .text .cont label{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .contact-cont .flex-container .text .cont p{
+        font-size: 20px;
+        margin-top: 10px;
+        display: flex;
+        gap: 0px 20px;
+        margin-left: 60px;
+    }
+    .contact-cont .flex-container .text .cont p span{
+        font-size: 30px;
+        cursor: pointer;
+    }
+}

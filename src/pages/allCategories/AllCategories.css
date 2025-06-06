@@ -1,0 +1,580 @@
+.allCategories{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.allCategories .title{
+    text-align: center;
+    color: #ee6545;
+    font-weight: bold;
+}
+.allCategories .flex-container{
+    display: flex;
+    margin-top: 30px;
+    gap: 0px 20px;
+}
+.allCategories .flex-container .cont{
+    width: 55%;
+    overflow-y: scroll;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+.allCategories .flex-container .cont::-webkit-scrollbar{
+    width: 15px;
+  }
+  .allCategories .flex-container .cont::-webkit-scrollbar-track{
+    border-radius: 40px;
+    background-color: #fbf3ea;
+  }
+  .allCategories .flex-container .cont::-webkit-scrollbar-thumb{
+    background-color: #ee6545;
+    border-radius: 40px;
+  }
+.allCategories .cont .card .card-body{
+    background-color: #fbf3ea;
+}
+.allCategories .cont .card .card-body .card-title{
+    font-size: 26px;
+}
+.allCategories .cont .none{
+    color: gray;
+    text-align: center;
+}
+.allCategories .flex-container .featured{
+    width: 40%;
+    height: 100%;
+}
+.allCategories .flex-container .featured form input{
+    width: 100%;
+    padding: 6px;
+    font-size: 18px;
+    border: 2px solid #ee6545;
+    outline: 0;
+    border-radius: 5px;
+}
+.allCategories .flex-container .featured h3{
+    border-bottom: 3px solid #ee6545;
+    margin-top: 30px;
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+.allCategories .flex-container .featured .post-cont{
+    border-bottom: 1px solid gray;
+}
+.allCategories .flex-container .featured .post-cont .flex{
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    margin-top: -10px;
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2560px){
+    .allCategories{
+        margin-top: 30px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 40px;
+        position: fixed;
+        width: 100%;
+    }
+    .allCategories .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 52px !important;
+        font-weight: bold;
+    }
+    .allCategories .flex-container{
+        display: flex;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .allCategories .flex-container .cont{
+        width: 100%;
+        overflow-y: scroll;
+        height: 100vh;
+        padding-right: 230px;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .allCategories .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .allCategories .cont .card{
+        width: 80rem !important;
+      }
+    .allCategories .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .allCategories .cont .card .card-body .card-title{
+        font-size: 52px !important;
+    }
+    .allCategories .cont .card .card-body .card-text{
+        font-size: 32px !important;
+    }
+    .allCategories .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .allCategories .flex-container .featured{
+        width: 100% !important;
+        margin-right: 50px;
+    }
+    .allCategories .flex-container .featured form input{
+        width: 90%;
+        padding: 10px;
+        font-size: 32px;
+        border: 2px solid v#ee6545;
+        outline: 0;
+        border-radius: 10px;
+    }
+    .allCategories .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 80px;
+        font-size: 36px;
+        padding-bottom: 10px;
+    }
+    .allCategories .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .allCategories .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .allCategories{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .allCategories .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .allCategories .flex-container{
+        display: flex;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .allCategories .flex-container .cont{
+        width: 100%;
+        overflow-y: scroll;
+        height: 850px;
+        padding-right: 100px;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .allCategories .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .allCategories .cont .card{
+        width: 30rem !important;
+      }
+    .allCategories .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .allCategories .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .allCategories .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .allCategories .flex-container .featured{
+        width: 100%;
+    }
+    .allCategories .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .allCategories .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .allCategories .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .allCategories .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .allCategories{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .allCategories .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .allCategories .flex-container{
+        display: flex;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .allCategories .flex-container .cont{
+        width: 100%;
+        overflow-y: scroll;
+        height: 70vh;
+        padding-right: 60px;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .allCategories .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .allCategories .cont .card{
+        width: 20rem !important;
+      }
+    .allCategories .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .allCategories .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .allCategories .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .allCategories .flex-container .featured{
+        width: 100%;
+    }
+    .allCategories .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .allCategories .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .allCategories .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .allCategories .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .allCategories{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .allCategories .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .allCategories .flex-container{
+        display: flex;
+        flex-direction: column-reverse !important;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .allCategories .flex-container .cont{
+        width: 100%;
+        margin-top: 50px !important;
+        overflow-y: scroll;
+        height: 45vh;
+        padding-right: 0px !important;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .allCategories .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .allCategories .cont .card{
+        width: 20rem !important;
+      }
+    .allCategories .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .allCategories .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .allCategories .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .allCategories .flex-container .featured{
+        width: 100%;
+    }
+    .allCategories .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .allCategories .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .allCategories .flex-container .featured .div{
+        display: none !important;
+    }
+    .allCategories .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .allCategories .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .allCategories{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .allCategories .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .allCategories .flex-container{
+        display: flex;
+        flex-direction: column-reverse !important;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .allCategories .flex-container .cont{
+        width: 100%;
+        margin-top: 50px !important;
+        overflow-y: scroll;
+        height: 45vh;
+        padding-right: 0px !important;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .allCategories .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .allCategories .cont .card{
+        width: 18rem !important;
+      }
+    .allCategories .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .allCategories .cont .card .card-body .card-title{
+        font-size: 26px;
+    }
+    .allCategories .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .allCategories .flex-container .featured{
+        width: 100%;
+    }
+    .allCategories .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .allCategories .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .allCategories .flex-container .featured .div{
+        display: none !important;
+    }
+    .allCategories .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .allCategories .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .allCategories{
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        position: fixed;
+    }
+    .allCategories .title{
+        text-align: center;
+        color: #ee6545;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .allCategories .flex-container{
+        display: flex;
+        flex-direction: column-reverse !important;
+        gap: 0px 20px;
+        margin-top: 30px;
+    }
+    .allCategories .flex-container .cont{
+        width: 100%;
+        margin-top: 50px !important;
+        overflow-y: scroll;
+        height: 45vh;
+        padding-right: 0px !important;
+        bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .allCategories .flex-container .cont::-webkit-scrollbar{
+        width: 15px;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-track{
+        border-radius: 40px;
+        background-color: #fbf3ea;
+      }
+      .allCategories .flex-container .cont::-webkit-scrollbar-thumb{
+        background-color: #ee6545;
+        border-radius: 40px;
+      }
+      .allCategories .cont .card{
+        width: 15rem !important;
+      }
+    .allCategories .cont .card .card-body{
+        background-color: #fbf3ea;
+    }
+    .allCategories .cont .card .card-body .card-title{
+        font-size: 22px;
+    }
+    .allCategories .cont .card .card-body .card-{}
+    .allCategories .cont .none{
+        color: gray;
+        text-align: center;
+    }
+    .allCategories .flex-container .featured{
+        width: 100%;
+    }
+    .allCategories .flex-container .featured form input{
+        width: 100%;
+        padding: 6px;
+        font-size: 18px;
+        border: 2px solid #ee6545;
+        outline: 0;
+        border-radius: 5px;
+    }
+    .allCategories .flex-container .featured h3{
+        border-bottom: 3px solid #ee6545;
+        margin-top: 30px;
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .allCategories .flex-container .featured .div{
+        display: none !important;
+    }
+    .allCategories .flex-container .featured .post-cont{
+        border-bottom: 1px solid gray;
+    }
+    .allCategories .flex-container .featured .post-cont .flex{
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -10px;
+    }
+}

@@ -3,9 +3,14 @@ import "./Dashboard.css";
 import CreateCategory from "./../../components/createCategory/CreateCategory";
 import CreateBlogs from "./../../components/createBlogs/CreateBlogs";
 import AllBlogs from "../../components/allBlogs/AllBlogs";
+import { useNavigate } from "react-router-dom";
+import { handleSuccess } from "../../components/Utils";
+import { Toaster } from "react-hot-toast";
+import { FiLogOut } from "react-icons/fi";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("tab1");
+  const navigate = useNavigate();
 
   const tabClick = (tabName) => {
     setActiveTab(tabName);
@@ -19,62 +24,59 @@ const Dashboard = () => {
       tab.style.display = "block";
     }
   };
+
+  const handleLogout = () => {
+    handleSuccess("Logout Successfully");
+    navigate("/");
+  };
   return (
     <div className="dashboard-cont">
+      {/* ---- Top Bar ---- */}
+      <div className="dashboard-header">
+        <h2 className="dashboard-title">Admin Dashboard</h2>
+        <button className="logout-btn" onClick={handleLogout}>
+          <FiLogOut size={18} />
+          <span>Logout</span>
+        </button>
+      </div>
+
+      {/* ---- Tabs ---- */}
       <div className="btn-container">
-        <div className="button">
+        <div className="tab-buttons">
           <button
-            className={activeTab === "tab1" ? "active-tab" : ""}
-            style={{
-              backgroundColor: activeTab === "tab1" ? "#212529" : "#ee6545",
-            }}
+            className={`tab-btn ${activeTab === "tab1" ? "active" : ""}`}
             onClick={() => tabClick("tab1")}
           >
             Create Category
           </button>
           <button
-            style={{
-              backgroundColor: activeTab === "tab2" ? "#212529" : "#ee6545",
-            }}
-            className={activeTab === "tab2" ? "active-tab" : ""}
+            className={`tab-btn ${activeTab === "tab2" ? "active" : ""}`}
             onClick={() => tabClick("tab2")}
           >
             Create Blogs
           </button>
           <button
-            style={{
-              backgroundColor: activeTab === "tab3" ? "#212529" : "#ee6545",
-            }}
-            className={activeTab === "tab3" ? "active-tab" : ""}
+            className={`tab-btn ${activeTab === "tab3" ? "active" : ""}`}
             onClick={() => tabClick("tab3")}
           >
             All Blogs
           </button>
         </div>
       </div>
+
+      {/* ---- Tab Content ---- */}
       <div className="content-container">
-        <div
-          className="tab"
-          id="tab1"
-          style={{ display: activeTab === "tab1" ? "block" : "none" }}
-        >
+        <div className={`tab-content ${activeTab === "tab1" ? "show" : ""}`}>
           <CreateCategory />
         </div>
-        <div
-          className="tab"
-          id="tab2"
-          style={{ display: activeTab === "tab2" ? "block" : "none" }}
-        >
+        <div className={`tab-content ${activeTab === "tab2" ? "show" : ""}`}>
           <CreateBlogs />
         </div>
-        <div
-          className="tab"
-          id="tab3"
-          style={{ display: activeTab === "tab3" ? "block" : "none" }}
-        >
+        <div className={`tab-content ${activeTab === "tab3" ? "show" : ""}`}>
           <AllBlogs />
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

@@ -101,7 +101,8 @@ const UpdateBlogs = () => {
   return (
     <div className="updateBlogs">
       <h3 className="title">Update Blog</h3>
-      <form className="createForm" onSubmit={handleUpdate}>
+
+      <form className="updateForm" onSubmit={handleUpdate}>
         <Select
           className="select"
           value={category}
@@ -115,36 +116,46 @@ const UpdateBlogs = () => {
             </Select.Option>
           ))}
         </Select>
-        <label>
-          Upload Image
+
+        <label className="file-upload">
+          {image ? "Change Image" : "Upload Image"}
           <input type="file" onChange={handleShowSetImage} hidden />
         </label>
+
         {image && (
-          <img src={image} alt="Preview" height="150px" width="150px" />
+          <div className="preview-img">
+            <img src={image} alt="Preview" />
+          </div>
         )}
+
         <input
           type="text"
-          placeholder="Write Title..."
+          placeholder="Edit Blog Title..."
           spellCheck="false"
           value={title1}
           onChange={(e) => setTitle1(e.target.value)}
         />
+
         <div className="textarea">
           <textarea
             rows={6}
-            placeholder="Write Description..."
+            placeholder="Edit Description..."
             value={description}
             spellCheck="false"
             onChange={(e) => setDescription(e.target.value)}
           />
-          <button onClick={handleBreak}>Next Line</button>
+          <button type="button" onClick={handleBreak}>
+            Add Line Break
+          </button>
         </div>
+
         <button className="submit" type="submit">
-          Update
+          Save Changes
         </button>
       </form>
-      <button className="btn btn-danger delete" onClick={handleDelete}>
-        Delete
+
+      <button className="delete" onClick={handleDelete}>
+        Delete Blog
       </button>
     </div>
   );

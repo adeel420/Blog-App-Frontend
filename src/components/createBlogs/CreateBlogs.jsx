@@ -53,8 +53,10 @@ const CreateBlogs = () => {
 
   return (
     <div className="createBlogs">
-      <h3 className="title">Create Blogs</h3>
-      <form className="createForm">
+      <h3 className="title">Create Blog</h3>
+
+      <form className="createForm" onSubmit={handlePost}>
+        {/* Category Selector */}
         <Select
           className="select"
           showSearch
@@ -67,41 +69,49 @@ const CreateBlogs = () => {
             </Select.Option>
           ))}
         </Select>
-        <label>
-          {file ? file.name : "Upload Image"}
+
+        {/* File Upload */}
+        <label className="file-upload">
+          {file ? file.name : "Upload Blog Image"}
           <input
             type="file"
             hidden
             onChange={(e) => setFile(e.target.files[0])}
           />
         </label>
+
+        {/* Image Preview */}
         {file && (
-          <img
-            src={URL.createObjectURL(file)}
-            alt=""
-            height={"150px"}
-            width={"150px"}
-          />
+          <div className="preview">
+            <img src={URL.createObjectURL(file)} alt="Preview" />
+          </div>
         )}
+
+        {/* Title Input */}
         <input
           type="text"
-          placeholder="Write Title..."
+          placeholder="Enter Blog Title..."
           spellCheck="false"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
+
+        {/* Description Textarea */}
         <div className="textarea">
           <textarea
-            name=""
             rows={6}
             placeholder="Write Description..."
             value={description}
             spellCheck="false"
             onChange={(e) => setDescription(e.target.value)}
           />
-          <button onClick={handleBreak}>Next Line</button>
+          <button type="button" onClick={handleBreak}>
+            Next Line
+          </button>
         </div>
-        <button className="submit" type="submit" onClick={handlePost}>
+
+        {/* Submit Button */}
+        <button className="submit" type="submit">
           Upload Blog
         </button>
       </form>

@@ -84,50 +84,53 @@ const DetailBlogs = () => {
 
   return (
     <div className="detailBlogs">
-      <div className="detail-cont">
-        <img src={blogs.image} className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">{blogs.title}</h5>
-          <p className="card-text">{blogs.description}</p>
+      <div className="blog-hero">
+        <img src={blogs.image} alt="Blog Visual" className="hero-image" />
+        <div className="hero-content">
+          <h1 className="blog-title">{blogs.title}</h1>
+          <p className="blog-description">{blogs.description}</p>
         </div>
       </div>
-      <div className="comment-cont">
-        <h3>Comments</h3>
-        <div className="comment">
-          <div className="container">
-            {getComment && getComment.length > 0 ? (
-              getComment.map((com) => (
-                <div className="cont" key={com._id}>
-                  <span className="badge">
-                    {com.user?.name ? com.user.name[0] : "G"}
-                  </span>
-                  <div className="info">
-                    <div className="flex">
-                      <h4>{com.user?.name ? com.user.name : "Guest"}</h4>
-                      <p className="date">{moment(com.createdAt).fromNow()}</p>
-                    </div>
-                    <p className="message">{com.comment}</p>
-                  </div>
+
+      <div className="comments-section">
+        <h3 className="section-heading">💬 Comments</h3>
+
+        <div className="comments-container">
+          {getComment && getComment.length > 0 ? (
+            getComment.map((com) => (
+              <div className="comment-item" key={com._id}>
+                <div className="avatar">
+                  {com.user?.name ? com.user.name[0] : "G"}
                 </div>
-              ))
-            ) : (
-              <p className="none">
-                <i>No comments here...</i>
-              </p>
-            )}
-          </div>
-          <form>
-            <input
-              type="text"
-              placeholder="Write comment here..."
-              value={comment}
-              onChange={(e) => setComment(e.target.value)}
-            />
-            <button type="submit" onClick={handleComment}>
-              Submit
-            </button>
-          </form>
+                <div className="comment-content">
+                  <div className="comment-header">
+                    <h4 className="username">{com.user?.name || "Guest"}</h4>
+                    <span className="comment-date">
+                      {moment(com.createdAt).fromNow()}
+                    </span>
+                  </div>
+                  <p className="comment-text">{com.comment}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p className="no-comments">
+              <i>No comments yet — be the first!</i>
+            </p>
+          )}
         </div>
+
+        <form className="comment-form">
+          <input
+            type="text"
+            placeholder="Write a comment..."
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+          />
+          <button type="submit" onClick={handleComment}>
+            Post
+          </button>
+        </form>
       </div>
     </div>
   );

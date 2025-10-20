@@ -1,133 +1,163 @@
-.header-cont nav{
-    background-color: #fff;
-    border-bottom: 1px solid black;
-}
-.header-cont nav .logo{
-    display: flex;
-    gap: 0px 15px;
-    justify-content: center;
-    align-items: center;
-}
-.header-cont nav .all{
-    margin-left: 40px;
-}
-.header-cont nav .logo img{
-    height: 50px;
-    width: 50px;
-}
-.header-cont nav .last{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-cont nav .last .btn{
-    margin-right: 20px;
-    background-color: #ee6545;
-    padding: 10px;
-    color: white;
-    width: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0px 5px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.header-cont nav .last .btn:hover{
-    background-color: #ca573d;
-}
-.header-cont nav .drop{
-    overflow-y: scroll;
-    height: 250px;
-}
-.header-cont nav .drop::-webkit-scrollbar{
-    width: 10px;
-}
-.header-cont nav .drop::-webkit-scrollbar-track{
-    background-color: #fbf3ea;
-}
-.header-cont nav .drop::-webkit-scrollbar-thumb{
-    background-color: #ee6545;
-    border-radius: 40px;
+/* ---------- Header Base ---------- */
+.header-cont {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid #f4e8df;
+  box-shadow: 0 6px 18px -10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-@media screen and (min-width: 2000px) and (max-width: 2560px){
-    .header-cont nav .logo{
-        font-size: 52px;
-        gap: 0px 35px;
-    }
-    .header-cont nav .logo img{
-        height: 80px;
-        width: 80px;
-    }
-    .header-cont nav li a{
-        font-size: 32px !important;
-    }
-    .header-cont nav .last .btn{
-        margin-right: 50px;
-        padding: 15px;
-        width: 380px;
-        gap: 0px 15px;
-    }
-    .header-cont nav .drop{
-        overflow-y: scroll;
-        height: 300px;
-    }
+/* ---------- Inner Layout ---------- */
+.header-inner {
+  margin: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media screen and (min-width: 1080px) and (max-width: 1800px){
-    .header-cont nav{
-        background-color: #fff;
-        border-bottom: 1px solid black;
-    }
-    .header-cont nav .logo{
-        display: flex;
-        gap: 0px 15px;
-        justify-content: center;
-        align-items: center;
-    }
-    .header-cont nav .all{
-        margin-left: 40px;
-    }
-    .header-cont nav .logo img{
-        height: 50px;
-        width: 50px;
-    }
-    .header-cont nav .last{
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .header-cont nav .last .btn{
-        margin-right: 20px;
-        background-color: #ee6545;
-        padding: 10px;
-        color: white;
-        width: 180px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0px 5px;
-        cursor: pointer;
-        border-radius: 10px;
-    }
-    .header-cont nav .last .btn:hover{
-        background-color: #ca573d;
-    }
-    .header-cont nav .drop{
-        overflow-y: scroll;
-        height: 250px;
-    }
+/* ---------- Logo ---------- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ee6545;
+  text-transform: uppercase;
+  transition: 0.3s ease;
 }
 
-@media screen and (max-width: 991px){
-    .header-cont nav{
-        z-index: 111111111;
-    }
-    .header-cont nav .drop{
-        overflow-y: scroll;
-        height: 200px;
-    }
+.logo img {
+  height: 45px;
+  width: 45px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: rotate(-5deg);
+}
+
+/* ---------- Center Nav ---------- */
+.navbar-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  font-size: 17px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: #ee6545;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ee6545 !important;
+}
+
+.nav-link:hover::after {
+  width: 60%;
+}
+
+/* ---------- Dropdown ---------- */
+.dropdown-menu {
+  background: #fff;
+  border: 1px solid #f4e8df;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px -10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: fadeIn 0.25s ease;
+}
+
+.dropdown-item {
+  padding: 10px 18px;
+  color: #333;
+  font-weight: 500;
+  border-left: 4px solid transparent;
+  transition: 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #fff5ef;
+  color: #ee6545;
+  border-left: 4px solid #ee6545;
+}
+
+/* ---------- Account Section ---------- */
+.account-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.account-btn {
+  background: linear-gradient(135deg, #ee6545, #ff8667);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px -6px rgba(238, 101, 69, 0.4);
+}
+
+.account-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #e05638, #ff7a5c);
+  box-shadow: 0 8px 20px -10px rgba(238, 101, 69, 0.5);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+  .header-inner {
+    margin: 0 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .account-section {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* ---------- Animation ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

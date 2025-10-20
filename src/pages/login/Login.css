@@ -1,141 +1,154 @@
-.login-cont{
-    background-color: #fbf3ea;
-    height: 90vh;
+/* ---------- Base Container ---------- */
+.login-cont {
+  background: linear-gradient(135deg, #fff6ef 0%, #fbf3ea 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
 }
-.login-cont .container{
-    background-color: #FFF;
-    padding: 15px;
-    position: absolute;
-    left: 50%;
-    border-radius: 8px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
+
+/* ---------- Card ---------- */
+.login-card {
+  background: #fff;
+  width: 400px;
+  border-radius: 16px;
+  padding: 40px 35px;
+  box-shadow: 0px 10px 25px -10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
 }
-.login-cont .container h3{
-    text-align: center;
+
+.login-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 30px -10px rgba(238, 101, 69, 0.25);
 }
-.login-cont .container form{
-    display: flex;
-    flex-direction: column;
+
+/* ---------- Headings ---------- */
+.login-card h3 {
+  color: #ee6545;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
-.login-cont .container form input{
-    margin-top: 15px;
+
+.login-card .subtitle {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* ---------- Form Fields ---------- */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-box {
+  position: relative;
+}
+
+.input-box .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ee6545;
+  font-size: 18px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  font-size: 16px;
+  border: 2px solid #f3d6c9;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: #ee6545;
+  box-shadow: 0 0 5px rgba(238, 101, 69, 0.2);
+}
+
+/* ---------- Button ---------- */
+.login-btn {
+  background-color: #ee6545;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #d95a3e;
+  box-shadow: 0 6px 18px -6px rgba(238, 101, 69, 0.3);
+}
+
+/* ---------- Bottom Text ---------- */
+.signup-text {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* ---------- Large Screens ---------- */
+@media screen and (min-width: 1600px) {
+  .login-card {
+    width: 600px;
+    padding: 60px;
+  }
+
+  .login-card h3 {
+    font-size: 44px;
+  }
+
+  .input-box input {
+    font-size: 20px;
+    padding: 14px 16px 14px 45px;
+  }
+
+  .login-btn {
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  .signup-text {
     font-size: 18px;
-    outline: 0;
-    border: 1px solid black;
-    padding: 6px;
-    border-radius: 5px;
-}
-.login-cont .container form button{
-    margin-top: 15px;
-    background-color: #ee6545;
-    font-size: 18px;
-    color: white;
-    border-radius: 5px;
-    padding: 6px;
-    border: none;
-}
-.login-cont .container form button:hover{
-    background-color: #cf583d;
-}
-.login-cont .container form span{
-    margin-top: 15px;
-    text-align: center;
+  }
 }
 
-@media screen and (min-width: 2000px) and (max-width: 2560px){
-    .login-cont{
-        height: 93vh;
-    }
-    .login-cont .container{
-        padding: 25px;
-        border-radius: 15px;
-        width: 800px;
-    }
-    .login-cont .container h3{
-        font-size: 62px;
-    }
-    .login-cont .container form input{
-        margin-top: 35px;
-        font-size: 32px;
-        padding: 10px;
-        border-radius: 10px;
-    }
-    .login-cont .container form button{
-        margin-top: 35px;
-        font-size: 32px;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    .login-cont .container form span{
-        margin-top: 35px;
-        font-size: 32px;
-    }
-}
+/* ---------- Mobile (≤600px) ---------- */
+@media screen and (max-width: 600px) {
+  .login-card {
+    width: 100%;
+    padding: 25px 20px;
+  }
 
-@media screen and (min-width: 1080px) and (max-width: 1800px){
-    .login-cont{
-        background-color: #fbf3ea;
-        height: 82vh;
-        border-bottom: 2px solid #ee6545;
-    }
-    .login-cont .container{
-        background-color: #FFF;
-        padding: 15px;
-        position: absolute;
-        left: 50%;
-        border-radius: 8px;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 400px;
-    }
-    .login-cont .container h3{
-        text-align: center;
-    }
-    .login-cont .container form{
-        display: flex;
-        flex-direction: column;
-    }
-    .login-cont .container form input{
-        margin-top: 15px;
-        font-size: 18px;
-        outline: 0;
-        border: 1px solid black;
-        padding: 6px;
-        border-radius: 5px;
-    }
-    .login-cont .container form button{
-        margin-top: 15px;
-        background-color: #ee6545;
-        font-size: 18px;
-        color: white;
-        border-radius: 5px;
-        padding: 6px;
-        border: none;
-    }
-    .login-cont .container form button:hover{
-        background-color: #cf583d;
-    }
-    .login-cont .container form span{
-        margin-top: 15px;
-        text-align: center;
-    }
-}
+  .login-card h3 {
+    font-size: 24px;
+  }
 
-@media only screen and (max-width: 425px){
-    .login-cont .container{
-        width: 300px;
-    }
-    .login-cont .container form input{
-        font-size: 15px;
-        padding: 4px;
-    }
-    .login-cont .container form button{
-        font-size: 15px;
-        padding: 4px;
-    }
-    .login-cont .container form span{
-        font-size: 15px;
-    }
+  .login-card .subtitle {
+    font-size: 14px;
+  }
+
+  .input-box input {
+    font-size: 15px;
+  }
+
+  .login-btn {
+    font-size: 16px;
+  }
+
+  .signup-text {
+    font-size: 14px;
+  }
 }

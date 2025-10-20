@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/Home";
 import Header from "./components/header/Header";
@@ -17,9 +17,21 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 
 function App() {
+  const location = useLocation();
+
+  // ✅ Hide Header/Footer on these paths
+  const hideHeaderAndFooter = ["/login", "/signup", "/dashboard"];
+  const currentPath = location.pathname;
+
+  // ✅ Check for dynamic route like /update/:title
+  const hide =
+    hideHeaderAndFooter.includes(currentPath) ||
+    currentPath.startsWith("/update/");
+
   return (
     <>
-      <Header />
+      {!hide && <Header />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
@@ -33,8 +45,9 @@ function App() {
         <Route path="/all-categories" element={<AllCategories />} />
         <Route path="/category/:category" element={<CategoryWise />} />
       </Routes>
+
       <Toaster />
-      {/* <Footer /> */}
+      {!hide && <Footer />}
     </>
   );
 }

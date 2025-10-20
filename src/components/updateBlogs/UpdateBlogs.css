@@ -1,98 +1,153 @@
-.updateBlogs{   
-    margin-bottom: 100px;
-    margin-top: 30px;
+.updateBlogs {
+  margin: 50px auto 120px auto;
+  max-width: 700px;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.updateBlogs .title{
-    color: #ee6545;
-    text-align: center;
-    font-weight: bold;
+
+.updateBlogs .title {
+  color: #ee6545;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
-.updateBlogs .createForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px 0;
-    margin-top: 30px;
+
+.updateBlogs .updateForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
-.updateBlogs .createForm .select{
-    width: 600px;
-    border: 2px solid #ee6545;
-    padding:0px;
-    outline: 0;
-    border-radius: 5px;
-    font-size: 18px;
+
+.updateBlogs .updateForm .select {
+  width: 100%;
+  border: 2px solid #ee6545;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s ease;
 }
-.updateBlogs .createForm label{
-    width: 600px;
-    border: 2px solid #ee6545;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px;
-    outline: 0;
-    color: #ee6545;
-    border-radius: 5px;
+
+.updateBlogs .updateForm .select:hover {
+  box-shadow: 0 0 8px rgba(238, 101, 69, 0.4);
 }
-.updateBlogs .createForm label:hover{
-    background-color: #ee6545;
-    color: white;
+
+.updateBlogs .file-upload {
+  width: 100%;
+  border: 2px dashed #ee6545;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ee6545;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
-.updateBlogs .createForm input{
-    width: 600px;
-    border: 2px solid #ee6545;
-    font-size: 18px;
-    padding: 6px;
-    outline: 0;
-    border-radius: 5px;
+
+.updateBlogs .file-upload:hover {
+  background-color: #ee6545;
+  color: #fff;
 }
-.updateBlogs .createForm .textarea{
-    width: 600px;
-    border: 2px solid #ee6545;
-    font-size: 18px;
-    padding: 6px;
-    outline: 0;
-    height: 200px;
-    position: relative;
-    border-radius: 5px;
+
+.updateBlogs .preview-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.updateBlogs .createForm .textarea textarea{
-    width: 580px;
-    border: none;    
-    resize: none;
-    outline: 0;
+
+.updateBlogs .preview-img img {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ee6545;
 }
-.updateBlogs .createForm .textarea button{
-    position: absolute;
-    right: 15px;
-    background-color: #ee6545;
-    font-size: 16px;
-    padding: 8px;
-    color: white;
-    border: none;
-    border-radius: 40px;
-    bottom: 15px;
+
+.updateBlogs input {
+  width: 100%;
+  border: 2px solid #ee6545;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 10px;
+  outline: none;
+  transition: border 0.3s ease;
 }
-.updateBlogs .createForm .textarea button:hover{
-    background-color: #ca553b;
+
+.updateBlogs input:focus {
+  border-color: #d75238;
+  box-shadow: 0 0 8px rgba(238, 101, 69, 0.3);
 }
-.updateBlogs .createForm .submit{
-    background-color: #ee6545;
-    font-size: 18px;
-    padding: 8px;
-    color: white;
-    width: 600px;
-    border: none;
-    border-radius: 10px;
+
+.updateBlogs .textarea {
+  width: 100%;
+  border: 2px solid #ee6545;
+  border-radius: 8px;
+  position: relative;
+  padding: 10px;
+  background-color: #fff8f6;
 }
-.updateBlogs .createForm .submit:hover{
-    background-color: #ca553b;
+
+.updateBlogs .textarea textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
 }
-.updateBlogs .delete{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    margin-top: 15px;
+
+.updateBlogs .textarea button {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background-color: #ee6545;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.updateBlogs .textarea button:hover {
+  background-color: #ca553b;
+}
+
+.updateBlogs .submit {
+  background-color: #ee6545;
+  font-size: 18px;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.updateBlogs .submit:hover {
+  background-color: #d75238;
+  transform: scale(1.02);
+}
+
+.updateBlogs .delete {
+  margin-top: 25px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.updateBlogs .delete:hover {
+  background-color: #b32a36;
+  transform: scale(1.02);
 }

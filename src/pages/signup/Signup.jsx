@@ -3,6 +3,7 @@ import "./Signup.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { handleError, handleSuccess } from "../../components/Utils";
 import { Toaster } from "react-hot-toast";
+import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 
 const Signup = () => {
   const [signupInfo, setSignupInfo] = useState({
@@ -55,35 +56,59 @@ const Signup = () => {
 
   return (
     <div className="signup-cont">
-      <div className="container">
-        <h3>Signup</h3>
+      <div className="signup-card">
+        <h3>Create Account ✨</h3>
+        <p className="subtitle">
+          Join WordSmith and start sharing your stories
+        </p>
         <form onSubmit={handleSignup}>
-          <input
-            type="text"
-            name="name"
-            value={signupInfo.name}
-            onChange={handleChange}
-            placeholder="Name"
-          />
-          <input
-            type="email"
-            name="email"
-            value={signupInfo.email}
-            onChange={handleChange}
-            placeholder="Email"
-          />
-          <input
-            type="password"
-            name="password"
-            value={signupInfo.password}
-            onChange={handleChange}
-            placeholder="Password"
-          />
-          <button type="submit">Signup</button>
-          <span>
+          <div className="input-box">
+            <FaUser className="icon" />
+            <input
+              type="text"
+              name="name"
+              value={signupInfo.name}
+              onChange={handleChange}
+              placeholder="Full Name"
+              required
+            />
+          </div>
+
+          <div className="input-box">
+            <FaEnvelope className="icon" />
+            <input
+              type="email"
+              name="email"
+              value={signupInfo.email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              required
+            />
+          </div>
+
+          <div className="input-box">
+            <FaLock className="icon" />
+            <input
+              type="password"
+              name="password"
+              value={signupInfo.password}
+              onChange={handleChange}
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <button type="submit" className="signup-btn">
+            Sign Up
+          </button>
+
+          <span className="login-text">
             Already have an account?{" "}
-            <NavLink style={{ color: "#ee6545" }} to={"/login"}>
-              Login
+            <NavLink
+              to="/login"
+              style={{ color: "#ee6545", fontWeight: "600" }}
+            >
+              Log In
             </NavLink>
           </span>
         </form>

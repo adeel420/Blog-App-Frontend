@@ -33,69 +33,79 @@ const Home = () => {
   }, []);
   return (
     <div className="home-cont">
-      <div className="hero-section">
-        <h2>Welcome to WordSmith – Your Daily Dose of Inspiration</h2>
+      {/* ---------- Hero Section ---------- */}
+      <section className="hero-section">
+        <h1>
+          Welcome to <span>WordSmith</span> – Your Daily Dose of Inspiration
+        </h1>
         <p>
-          Explore articles, tips, and stories that spark creativity, empower
-          growth, and enrich lives.
+          Discover insights, ideas, and stories that ignite creativity, nurture
+          growth, and celebrate the power of words.
         </p>
-        <Link to="/blogs" style={{ textDecoration: "none" }}>
-          <button>Explore Blogs</button>
+        <Link to="/blogs" className="hero-btn">
+          Explore Blogs
         </Link>
-      </div>
-      <div className="featured-category">
-        <h3 className="title">Featured Category</h3>
+      </section>
+
+      {/* ---------- Featured Categories ---------- */}
+      <section className="featured-category">
+        <h3 className="title">Explore by Category</h3>
         <div className="cont">
           {categories.map((category) => (
             <Link
               to={`/category/${category.category}`}
-              style={{ textDecoration: "wavy" }}
+              key={category._id}
+              className="card category-card"
             >
-              <div
-                className="card"
-                style={{ width: "18rem" }}
-                key={category._id}
-              >
-                <img
-                  src="./images/back-png.png"
-                  className="card-img-top"
-                  alt="..."
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{category.category}</h5>
-                </div>
+              <div className="img-overlay">
+                <img src="./images/back-png.png" alt={category.category} />
+                <div className="overlay"></div>
+                <h5>{category.category}</h5>
               </div>
             </Link>
           ))}
         </div>
-      </div>
-      <div className="featured-blogs">
+      </section>
+
+      {/* ---------- Featured Blogs ---------- */}
+      <section className="featured-blogs">
         <h3 className="title">Featured Blogs</h3>
         <div className="cont">
           {blogs.map((blog) => (
             <Link
               to={`/detail/${blog.title}`}
-              style={{ textDecoration: "wavy" }}
+              key={blog._id}
+              className="card blog-card"
             >
-              <div className="card" style={{ width: "18rem" }} key={blog._id}>
-                <img src={blog.image} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">
-                    {blog.title.length > 40
-                      ? `${blog.title.substring(0, 40)}...`
-                      : blog.title}
-                  </h5>
-                  <p className="card-text">
-                    {blog.description.length > 100
-                      ? `${blog.description.substring(0, 100)}...`
-                      : blog.description}
-                  </p>
-                </div>
+              <img src={blog.image} alt={blog.title} />
+              <div className="card-body">
+                <h5>
+                  {blog.title.length > 40
+                    ? `${blog.title.substring(0, 40)}...`
+                    : blog.title}
+                </h5>
+                <p>
+                  {blog.description.length > 100
+                    ? `${blog.description.substring(0, 100)}...`
+                    : blog.description}
+                </p>
               </div>
             </Link>
           ))}
         </div>
-      </div>
+      </section>
+
+      {/* ---------- CTA Section ---------- */}
+      <section className="cta-section">
+        <h3>Join the WordSmith Community</h3>
+        <p>
+          Stay inspired, share your thoughts, and never miss an update. Sign up
+          and become part of our growing creative circle.
+        </p>
+        <Link to="/signup">
+          <button>Get Started</button>
+        </Link>
+      </section>
     </div>
   );
 };

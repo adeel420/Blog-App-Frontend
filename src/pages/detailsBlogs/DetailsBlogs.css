@@ -1,335 +1,193 @@
-.detailBlogs{
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+.detailBlogs {
+  margin: 60px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
 }
-.detailBlogs .detail-cont img{
-    height: 550px;
-    border-radius: 5px;
+
+/* --- Blog Section --- */
+.blog-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.detailBlogs .detail-cont .card-body .card-title{
-    font-size: 42px;
-    margin-top: 50px;
-    text-align: center;
-    font-weight: bold;
+
+.hero-image {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
-.detailBlogs .detail-cont .card-body .card-text{
-    margin-top: 50px;
-    font-size: 26px;
-    color: grey;
+
+.hero-content {
+  margin-top: 40px;
 }
-.detailBlogs .comment-cont{
-    margin-top: 60px;
+
+.blog-title {
+  font-size: 42px;
+  color: #222;
+  font-weight: 700;
+  line-height: 1.3;
 }
-.detailBlogs .comment-cont h3{
-    color: #ee6545;
-    text-align: center;
-    font-weight: bold;
+
+.blog-description {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #666;
+  line-height: 1.7;
 }
-.detailBlogs .comment-cont .none{
-    color: gray;
-    margin-top: 30px;
-    text-align: center;
+
+/* --- Comments Section --- */
+.comments-section {
+  margin-top: 80px;
+  background-color: #fff9f6;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
 }
-.detailBlogs .comment-cont .comment{
-    background-color: #fbf3ea;
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 5px;
+
+.section-heading {
+  color: #ee6545;
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 40px;
 }
-.detailBlogs .comment-cont .comment .container{
-    display: flex;
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comment-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.avatar {
+  background-color: #ee6545;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.comment-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.comment-text {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.no-comments {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* --- Comment Form --- */
+.comment-form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-form input {
+  flex: 1;
+  max-width: 600px;
+  border: 2px solid #ee6545;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.comment-form input:focus {
+  border-color: #ca553b;
+}
+
+.comment-form button {
+  background-color: #ee6545;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment-form button:hover {
+  background-color: #ca553b;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero-image {
+    height: 300px;
+  }
+
+  .blog-title {
+    font-size: 28px;
+  }
+
+  .blog-description {
+    font-size: 16px;
+  }
+
+  .comment-form input {
+    width: 200px;
+  }
+
+  .comment-item {
     flex-direction: column;
-    gap: 0px 20px;
-}
-.detailBlogs .comment-cont .comment .container .cont{
-    display: flex;
-    gap: 0px 20px;
-}
-.detailBlogs .comment-cont .comment .container .badge{
-    background-color: #ee6545;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-}
-.detailBlogs .comment-cont .comment .container .info .flex{
-    display: flex;
-    gap: 0px 50px;
-    align-items: center;
-}
-.detailBlogs .comment-cont .comment .container .info .flex h4{
-    font-weight: bold;
-    
-}
-.detailBlogs .comment-cont .comment .container .info .flex .date{
-    color: gray;
-}
-.detailBlogs .comment-cont .comment form{
-    display: flex;
-    margin-top: 40px;
-    justify-content: center;
-}
-.detailBlogs .comment-cont .comment form input{
-    border: 2px solid #ee6545;
-    outline: 0;
-    padding: 6px;
-    width: 600px;
-    font-size: 18px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.detailBlogs .comment-cont .comment form button{
-    background-color: #ee6545;
-    color: white;
-    padding: 6px;
-    border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    font-size: 18px;
-}
-.detailBlogs .comment-cont .comment form button:hover{
-    background-color: #c7543a;
-}
+  }
 
-@media screen and (min-width: 2000px) and (max-width: 2560px){
-    .detailBlogs{
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-    .detailBlogs .detail-cont img{
-        height: 950px;
-        border-radius: 5px;
-    }
-    .detailBlogs .detail-cont .card-body .card-title{
-        font-size: 62px;
-        margin-top: 80px;
-    }
-    .detailBlogs .detail-cont .card-body .card-text{
-        margin-top: 80px;
-        font-size: 36px;
-    }
-    .detailBlogs .comment-cont{
-        margin-top: 160px;
-    }
-    .detailBlogs .comment-cont h3{
-        font-size: 62px;
-    }
-    .detailBlogs .comment-cont .none{
-        font-size: 32px !important;
-        margin-top: 30px;
-    }
-    .detailBlogs .comment-cont .comment{
-        margin-top: 60px;
-    }
-    .detailBlogs .comment-cont .comment .container{
-        gap: 30px 20px;
-        margin-top: 20px;
-    }
-    .detailBlogs .comment-cont .comment .container .cont{
-        display: flex;
-        gap: 0px 20px;
-    }
-    .detailBlogs .comment-cont .comment .container .badge{
-        border-radius: 40px;
-        font-size: 26px;
-        height: 60px;
-        width: 60px;
-    }
-    .detailBlogs .comment-cont .comment .container .info .message{
-        font-size: 32px;
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex{
-        display: flex;
-        gap: 0px 50px;
-        align-items: center;
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex h4{
-        font-size: 32px;
-        
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex .date{
-        font-size: 22px;
-    }
-    .detailBlogs .comment-cont .comment form{
-        display: flex;
-        margin-top: 80px;
-        justify-content: center;
-    }
-    .detailBlogs .comment-cont .comment form input{
-        padding: 15px;
-        width: 800px;
-        font-size: 32px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-    }
-    .detailBlogs .comment-cont .comment form button{
-        padding: 15px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        font-size: 32px;
-    }
-}
-
-@media screen and (min-width: 1080px) and (max-width: 1800px){
-    .detailBlogs{
-        margin-left: 40px;
-        margin-right: 40px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    .detailBlogs .detail-cont img{
-        height: 550px;
-        border-radius: 5px;
-    }
-    .detailBlogs .detail-cont .card-body .card-title{
-        font-size: 42px;
-        margin-top: 50px;
-        text-align: center;
-        font-weight: bold;
-    }
-    .detailBlogs .detail-cont .card-body .card-text{
-        margin-top: 50px;
-        font-size: 26px;
-        color: grey;
-    }
-    .detailBlogs .comment-cont{
-        margin-top: 60px;
-    }
-    .detailBlogs .comment-cont h3{
-        color: #ee6545;
-        text-align: center;
-        font-weight: bold;
-    }
-    .detailBlogs .comment-cont .none{
-        color: gray;
-        margin-top: 30px;
-        text-align: center;
-    }
-    .detailBlogs .comment-cont .comment{
-        background-color: #fbf3ea;
-        margin-top: 30px;
-        padding: 20px;
-        border-radius: 5px;
-    }
-    .detailBlogs .comment-cont .comment .container{
-        display: flex;
-        flex-direction: column;
-        gap: 0px 20px;
-    }
-    .detailBlogs .comment-cont .comment .container .cont{
-        display: flex;
-        gap: 0px 20px;
-    }
-    .detailBlogs .comment-cont .comment .container .badge{
-        background-color: #ee6545;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        font-size: 18px;
-        align-items: center;
-        height: 50px;
-        width: 50px;
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex{
-        display: flex;
-        gap: 0px 50px;
-        align-items: center;
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex h4{
-        font-weight: bold;
-        
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex .date{
-        color: gray;
-    }
-    .detailBlogs .comment-cont .comment form{
-        display: flex;
-        margin-top: 40px;
-        justify-content: center;
-    }
-    .detailBlogs .comment-cont .comment form input{
-        border: 2px solid #ee6545;
-        outline: 0;
-        padding: 6px;
-        width: 600px;
-        font-size: 18px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-    .detailBlogs .comment-cont .comment form button{
-        background-color: #ee6545;
-        color: white;
-        padding: 6px;
-        border: none;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 425px){
-    .detailBlogs{
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .detailBlogs .detail-cont img{
-        height: 250px;
-    }
-    .detailBlogs .detail-cont .card-body .card-title{
-        font-size: 22px;
-        margin-top: 30px;
-    }
-    .detailBlogs .detail-cont .card-body .card-text{
-        margin-top: 30px;
-        font-size: 16px;
-    }
-    .detailBlogs .comment-cont .none{
-        color: gray;
-        margin-top: 30px;
-        text-align: center;
-    }
-    .detailBlogs .comment-cont .comment .container{
-        display: flex;
-        flex-direction: column;
-        gap: 0px 20px;
-    }
-    .detailBlogs .comment-cont .comment .container .badge{
-        font-size: 15px;
-        height: 30px;
-        width: 30px;
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex{
-        display: flex;
-        gap: 0px 50px;
-        align-items: center;
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex h4{
-        font-size: 18px !important;
-    }
-    .detailBlogs .comment-cont .comment .container .info .flex .date{
-        font-size: 12px !important;
-    }
-    .detailBlogs .comment-cont .comment form input{
-        border: 2px solid #ee6545;
-        outline: 0;
-        padding: 4px;
-        width: 200px !important;
-        font-size: 16px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-    .detailBlogs .comment-cont .comment form button{
-        background-color: #ee6545;
-        color: white;
-        padding: 6px;
-        border: none;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        font-size: 18px;
-    }
+  .comment-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

@@ -82,21 +82,25 @@ const CreateCategory = () => {
   return (
     <div className="createCategory">
       <h3 className="title">Create Category</h3>
+
+      {/* ---- Create Category Form ---- */}
       <form className="createForm" onSubmit={handleCreate}>
         <input
           type="text"
-          placeholder="Create Category..."
+          placeholder="Enter new category..."
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         />
         <button type="submit">Create</button>
       </form>
+
+      {/* ---- Category Table ---- */}
       <div className="table-cont">
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Category</th>
-              <th scope="col">Action</th>
+              <th>Category</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -104,9 +108,9 @@ const CreateCategory = () => {
               categories.map((cat) => (
                 <tr key={cat._id}>
                   <td>{cat.category}</td>
-                  <td style={{ gap: "0px 5px", display: "flex" }}>
+                  <td>
                     <button
-                      className="btn btn-outline-dark"
+                      className="update-btn"
                       onClick={() => {
                         handlePopup();
                         setSelected(cat._id);
@@ -116,7 +120,7 @@ const CreateCategory = () => {
                       Update
                     </button>
                     <button
-                      className="btn btn-danger"
+                      className="delete-btn"
                       onClick={() => handleDelete(cat._id)}
                     >
                       Delete
@@ -125,31 +129,36 @@ const CreateCategory = () => {
                 </tr>
               ))
             ) : (
-              <h3>No Category Created</h3>
+              <tr>
+                <td colSpan="2" className="no-cat">
+                  No Categories Found
+                </td>
+              </tr>
             )}
           </tbody>
         </table>
       </div>
-      <div
-        className="popup-container"
-        style={{ display: openPopup ? "block" : "none" }}
-      >
-        <div className="popup">
-          <button className="times" onClick={handlePopup}>
-            &times;
-          </button>
-          <h4>Update Category</h4>
-          <form onSubmit={handleUpdate}>
-            <input
-              type="text"
-              placeholder="Update Category..."
-              value={updated}
-              onChange={(e) => setUpdated(e.target.value)}
-            />
-            <button type="submit">Update</button>
-          </form>
+
+      {/* ---- Update Popup ---- */}
+      {openPopup && (
+        <div className="popup-container">
+          <div className="popup">
+            <button className="close-btn" onClick={handlePopup}>
+              &times;
+            </button>
+            <h4>Update Category</h4>
+            <form onSubmit={handleUpdate}>
+              <input
+                type="text"
+                placeholder="Update category name..."
+                value={updated}
+                onChange={(e) => setUpdated(e.target.value)}
+              />
+              <button type="submit">Update</button>
+            </form>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

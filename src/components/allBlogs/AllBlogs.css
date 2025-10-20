@@ -1,28 +1,141 @@
-.allBlogs{
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 40px;
+/* ---------- Container ---------- */
+.allBlogs {
+  margin: 50px auto;
+  padding: 0 30px 50px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
 }
-.allBlogs .title{
-    color: #ee6545;
-    text-align: center;
-    font-weight: bold;
+
+/* ---------- Title ---------- */
+.allBlogs .title {
+  text-align: center;
+  color: #ee6545;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
 }
-.allBlogs .card-cont{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px 40px;
-    margin-top: 50px;
+
+.allBlogs .title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ee6545;
+  margin: 10px auto 0;
+  border-radius: 3px;
 }
-.allBlogs .card-cont .card .card-body{
-    background-color: #fbf3ea;
+
+/* ---------- Cards Grid ---------- */
+.allBlogs .card-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
 }
-.allBlogs .card-cont .card img{
-    height: 25rem;
-    width: 30rem;
+
+/* ---------- Blog Card ---------- */
+.allBlogs .card-link {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
 }
-.allBlogs .card-cont .card .card-title{
+
+.allBlogs .card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.allBlogs .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(238, 101, 69, 0.25);
+}
+
+/* ---------- Image Section ---------- */
+.allBlogs .card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.allBlogs .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.allBlogs .card:hover .card-image img {
+  transform: scale(1.08);
+}
+
+/* ---------- Body Section ---------- */
+.allBlogs .card-body {
+  background: linear-gradient(to bottom, #fff, #fff7f3);
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ---------- Title ---------- */
+.allBlogs .card-body .card-title {
+  color: #ee6545;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
+}
+
+.allBlogs .card:hover .card-body .card-title {
+  color: #cf4d2e;
+}
+
+/* ---------- Text ---------- */
+.allBlogs .card-body .card-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+  flex-grow: 1;
+}
+
+/* ---------- No Blogs Message ---------- */
+.allBlogs .no-blogs {
+  text-align: center;
+  color: gray;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 768px) {
+  .allBlogs {
+    padding: 0 15px 40px;
+  }
+
+  .allBlogs .title {
     font-size: 26px;
+  }
+
+  .allBlogs .card-body {
+    padding: 15px;
+  }
+
+  .allBlogs .card-body .card-title {
+    font-size: 18px;
+  }
+
+  .allBlogs .card-body .card-text {
+    font-size: 14px;
+  }
 }

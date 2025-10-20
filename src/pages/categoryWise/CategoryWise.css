@@ -1,583 +1,178 @@
-.categoryWise{
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 30px;
-    margin-bottom: 50px;
+.categoryWise {
+  margin: 40px auto;
+  max-width: 1300px;
+  padding: 0 20px;
 }
-.categoryWise .title{
-    text-align: center;
-    font-weight: bold;
-    color: #ee6545;
+
+.categoryWise .title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
 }
-.categoryWise .title span{
-    font-weight: 400;
+
+.categoryWise .title span {
+  color: #ee6545;
 }
-.categoryWise .flex-container{
-    display: flex;
-    margin-top: 30px;
-    gap: 0px 20px;
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
-.categoryWise .cont{
-    width: 55%;
-    overflow-y: scroll;
-    height: 450px;
-    display: flex;
-    margin-top: 50px;
+
+/* --- LEFT SIDE (BLOGS) --- */
+.cont {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.blog-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  background-color: #fbf3ea;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.card-category span {
+  font-weight: bold;
+  color: #ee6545;
+}
+
+/* --- RIGHT SIDE (FEATURED) --- */
+.featured {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featured form input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 2px solid #ee6545;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.featured form input:focus {
+  border-color: #cf583d;
+}
+
+.featured-posts h3 {
+  font-size: 22px;
+  color: #ee6545;
+  border-bottom: 3px solid #ee6545;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.post-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  background-color: #fbf3ea;
+}
+
+.post-title {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: gray;
+}
+
+/* --- NO BLOG MESSAGE --- */
+.none {
+  color: gray;
+  text-align: center;
+  grid-column: span 2;
+  margin-top: 50px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .flex-container {
     flex-direction: column;
-    gap: 30px 0;
-}
-.categoryWise .flex-container .cont::-webkit-scrollbar{
-    width: 15px;
   }
-  .categoryWise .flex-container .cont::-webkit-scrollbar-track{
-    border-radius: 40px;
-    background-color: #fbf3ea;
+
+  .cont {
+    grid-template-columns: 1fr;
   }
-  .categoryWise .flex-container .cont::-webkit-scrollbar-thumb{
-    background-color: #ee6545;
-    border-radius: 40px;
+
+  .featured {
+    margin-top: 40px;
   }
-.categoryWise .cont .card .card-body{
-    background-color: #fbf3ea;
 }
-.categoryWise .cont .card .card-body .card-title{
-    font-size: 26px;
-}
-.categoryWise .cont .none{
-    color: gray;
-    text-align: center;
-}
-.categoryWise .flex-container .featured{
-    width: 40%;
-    height: 100%;
-}
-.categoryWise .flex-container .featured form input{
-    width: 100%;
-    padding: 6px;
+
+@media (max-width: 600px) {
+  .categoryWise .title {
+    font-size: 22px;
+  }
+
+  .card-img {
+    height: 160px;
+  }
+
+  .card-title {
     font-size: 18px;
-    border: 2px solid #ee6545;
-    outline: 0;
-    border-radius: 5px;
-}
-.categoryWise .flex-container .featured h3{
-    border-bottom: 3px solid #ee6545;
-    font-size: 26px;
-    margin-top: 30px;
-    padding-bottom: 10px;
-}
-.categoryWise .flex-container .featured .post-cont{
-    border-bottom: 1px solid gray;
-}
-.categoryWise .flex-container .featured .post-cont .flex{
-    display: flex;
-    justify-content: space-between;
-    color: gray;
-    margin-top: -10px;
-}
+  }
 
-@media screen and (min-width: 2000px) and (max-width: 2560px){
-    .categoryWise{
-        margin-top: 30px;
-        margin-left: 80px;
-        margin-right: 80px;
-        margin-bottom: 40px;
-        position: fixed;
-        width: 100%;
-    }
-    .categoryWise .title{
-        text-align: center;
-        color: #ee6545;
-        font-size: 52px !important;
-        font-weight: bold;
-    }
-    .categoryWise .flex-container{
-        display: flex;
-        gap: 0px 20px;
-        margin-top: 30px;
-    }
-    .categoryWise .flex-container .cont{
-        width: 100%;
-        overflow-y: scroll;
-        height: 100vh;
-        padding-right: 230px;
-        bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px 0;
-    }
-    .categoryWise .flex-container .cont::-webkit-scrollbar{
-        width: 15px;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-track{
-        border-radius: 40px;
-        background-color: #fbf3ea;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-thumb{
-        background-color: #ee6545;
-        border-radius: 40px;
-      }
-      .categoryWise .cont .card{
-        width: 80rem !important;
-      }
-    .categoryWise .cont .card .card-body{
-        background-color: #fbf3ea;
-    }
-    .categoryWise .cont .card .card-body .card-title{
-        font-size: 52px !important;
-    }
-    .categoryWise .cont .card .card-body .card-text{
-        font-size: 32px !important;
-    }
-    .categoryWise .cont .none{
-        color: gray;
-        text-align: center;
-    }
-    .categoryWise .flex-container .featured{
-        width: 100% !important;
-        margin-right: 50px;
-    }
-    .categoryWise .flex-container .featured form input{
-        width: 90%;
-        padding: 10px;
-        font-size: 32px;
-        border: 2px solid v#ee6545;
-        outline: 0;
-        border-radius: 10px;
-    }
-    .categoryWise .flex-container .featured h3{
-        border-bottom: 3px solid #ee6545;
-        margin-top: 80px;
-        font-size: 36px;
-        padding-bottom: 10px;
-    }
-    .categoryWise .flex-container .featured .post-cont{
-        border-bottom: 1px solid gray;
-    }
-    .categoryWise .flex-container .featured .post-cont .flex{
-        display: flex;
-        justify-content: space-between;
-        color: gray;
-        margin-top: -10px;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    .categoryWise{
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-        position: fixed;
-    }
-    .categoryWise .title{
-        text-align: center;
-        color: #ee6545;
-        font-size: 36px;
-        font-weight: bold;
-    }
-    .categoryWise .flex-container{
-        display: flex;
-        gap: 0px 20px;
-        margin-top: 30px;
-    }
-    .categoryWise .flex-container .cont{
-        width: 100%;
-        overflow-y: scroll;
-        height: 850px;
-        padding-right: 100px;
-        bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px 0;
-    }
-    .categoryWise .flex-container .cont::-webkit-scrollbar{
-        width: 15px;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-track{
-        border-radius: 40px;
-        background-color: #fbf3ea;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-thumb{
-        background-color: #ee6545;
-        border-radius: 40px;
-      }
-      .categoryWise .cont .card{
-        width: 30rem !important;
-      }
-    .categoryWise .cont .card .card-body{
-        background-color: #fbf3ea;
-    }
-    .categoryWise .cont .card .card-body .card-title{
-        font-size: 26px;
-    }
-    .categoryWise .cont .none{
-        color: gray;
-        text-align: center;
-    }
-    .categoryWise .flex-container .featured{
-        width: 100%;
-    }
-    .categoryWise .flex-container .featured form input{
-        width: 100%;
-        padding: 6px;
-        font-size: 18px;
-        border: 2px solid #ee6545;
-        outline: 0;
-        border-radius: 5px;
-    }
-    .categoryWise .flex-container .featured h3{
-        border-bottom: 3px solid #ee6545;
-        margin-top: 30px;
-        font-size: 26px;
-        padding-bottom: 10px;
-    }
-    .categoryWise .flex-container .featured .post-cont{
-        border-bottom: 1px solid gray;
-    }
-    .categoryWise .flex-container .featured .post-cont .flex{
-        display: flex;
-        justify-content: space-between;
-        color: gray;
-        margin-top: -10px;
-    }
-}
-
-@media screen and (max-width: 768px){
-    .categoryWise{
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-        position: fixed;
-    }
-    .categoryWise .title{
-        text-align: center;
-        color: #ee6545;
-        font-size: 26px !important;
-        font-weight: bold;
-    }
-    .categoryWise .flex-container{
-        display: flex;
-        gap: 0px 20px;
-        margin-top: 30px;
-    }
-    .categoryWise .flex-container .cont{
-        width: 100%;
-        overflow-y: scroll;
-        height: 70vh;
-        padding-right: 60px;
-        bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px 0;
-    }
-    .categoryWise .flex-container .cont::-webkit-scrollbar{
-        width: 15px;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-track{
-        border-radius: 40px;
-        background-color: #fbf3ea;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-thumb{
-        background-color: #ee6545;
-        border-radius: 40px;
-      }
-      .categoryWise .cont .card{
-        width: 20rem !important;
-      }
-    .categoryWise .cont .card .card-body{
-        background-color: #fbf3ea;
-    }
-    .categoryWise .cont .card .card-body .card-title{
-        font-size: 26px;
-    }
-    .categoryWise .cont .none{
-        color: gray;
-        text-align: center;
-    }
-    .categoryWise .flex-container .featured{
-        width: 100%;
-    }
-    .categoryWise .flex-container .featured form input{
-        width: 100%;
-        padding: 6px;
-        font-size: 18px;
-        border: 2px solid #ee6545;
-        outline: 0;
-        border-radius: 5px;
-    }
-    .categoryWise .flex-container .featured h3{
-        border-bottom: 3px solid #ee6545;
-        margin-top: 30px;
-        font-size: 26px;
-        padding-bottom: 10px;
-    }
-    .categoryWise .flex-container .featured .post-cont{
-        border-bottom: 1px solid gray;
-    }
-    .categoryWise .flex-container .featured .post-cont .flex{
-        display: flex;
-        justify-content: space-between;
-        color: gray;
-        margin-top: -10px;
-    }
-}
-
-@media screen and (max-width: 425px){
-    .categoryWise{
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-        position: fixed;
-    }
-    .categoryWise .title{
-        text-align: center;
-        color: #ee6545;
-        font-size: 20px !important;
-        font-weight: bold;
-    }
-    .categoryWise .flex-container{
-        display: flex;
-        flex-direction: column-reverse !important;
-        gap: 0px 20px;
-        margin-top: 30px;
-    }
-    .categoryWise .flex-container .cont{
-        width: 100%;
-        margin-top: 50px !important;
-        overflow-y: scroll;
-        height: 45vh;
-        padding-right: 0px !important;
-        bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px 0;
-    }
-    .categoryWise .flex-container .cont::-webkit-scrollbar{
-        width: 15px;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-track{
-        border-radius: 40px;
-        background-color: #fbf3ea;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-thumb{
-        background-color: #ee6545;
-        border-radius: 40px;
-      }
-      .categoryWise .cont .card{
-        width: 20rem !important;
-      }
-    .categoryWise .cont .card .card-body{
-        background-color: #fbf3ea;
-    }
-    .categoryWise .cont .card .card-body .card-title{
-        font-size: 26px;
-    }
-    .categoryWise .cont .none{
-        color: gray;
-        text-align: center;
-    }
-    .categoryWise .flex-container .featured{
-        width: 100%;
-    }
-    .categoryWise .flex-container .featured form input{
-        width: 100%;
-        padding: 6px;
-        font-size: 18px;
-        border: 2px solid #ee6545;
-        outline: 0;
-        border-radius: 5px;
-    }
-    .categoryWise .flex-container .featured h3{
-        border-bottom: 3px solid #ee6545;
-        margin-top: 30px;
-        font-size: 26px;
-        padding-bottom: 10px;
-    }
-    .categoryWise .flex-container .featured .div{
-        display: none !important;
-    }
-    .categoryWise .flex-container .featured .post-cont{
-        border-bottom: 1px solid gray;
-    }
-    .categoryWise .flex-container .featured .post-cont .flex{
-        display: flex;
-        justify-content: space-between;
-        color: gray;
-        margin-top: -10px;
-    }
-}
-
-@media screen and (max-width: 375px){
-    .categoryWise{
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-        position: fixed;
-    }
-    .categoryWise .title{
-        text-align: center;
-        color: #ee6545;
-        font-size: 20px !important;
-        font-weight: bold;
-    }
-    .categoryWise .flex-container{
-        display: flex;
-        flex-direction: column-reverse !important;
-        gap: 0px 20px;
-        margin-top: 30px;
-    }
-    .categoryWise .flex-container .cont{
-        width: 100%;
-        margin-top: 50px !important;
-        overflow-y: scroll;
-        height: 45vh;
-        padding-right: 0px !important;
-        bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px 0;
-    }
-    .categoryWise .flex-container .cont::-webkit-scrollbar{
-        width: 15px;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-track{
-        border-radius: 40px;
-        background-color: #fbf3ea;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-thumb{
-        background-color: #ee6545;
-        border-radius: 40px;
-      }
-      .categoryWise .cont .card{
-        width: 18rem !important;
-      }
-    .categoryWise .cont .card .card-body{
-        background-color: #fbf3ea;
-    }
-    .categoryWise .cont .card .card-body .card-title{
-        font-size: 26px;
-    }
-    .categoryWise .cont .none{
-        color: gray;
-        text-align: center;
-    }
-    .categoryWise .flex-container .featured{
-        width: 100%;
-    }
-    .categoryWise .flex-container .featured form input{
-        width: 100%;
-        padding: 6px;
-        font-size: 18px;
-        border: 2px solid #ee6545;
-        outline: 0;
-        border-radius: 5px;
-    }
-    .categoryWise .flex-container .featured h3{
-        border-bottom: 3px solid #ee6545;
-        margin-top: 30px;
-        font-size: 26px;
-        padding-bottom: 10px;
-    }
-    .categoryWise .flex-container .featured .div{
-        display: none !important;
-    }
-    .categoryWise .flex-container .featured .post-cont{
-        border-bottom: 1px solid gray;
-    }
-    .categoryWise .flex-container .featured .post-cont .flex{
-        display: flex;
-        justify-content: space-between;
-        color: gray;
-        margin-top: -10px;
-    }
-}
-
-@media screen and (max-width: 330px){
-    .categoryWise{
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-        position: fixed;
-    }
-    .categoryWise .title{
-        text-align: center;
-        color: #ee6545;
-        font-size: 20px !important;
-        font-weight: bold;
-    }
-    .categoryWise .flex-container{
-        display: flex;
-        flex-direction: column-reverse !important;
-        gap: 0px 20px;
-        margin-top: 30px;
-    }
-    .categoryWise .flex-container .cont{
-        width: 100%;
-        margin-top: 50px !important;
-        overflow-y: scroll;
-        height: 45vh;
-        padding-right: 0px !important;
-        bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px 0;
-    }
-    .categoryWise .flex-container .cont::-webkit-scrollbar{
-        width: 15px;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-track{
-        border-radius: 40px;
-        background-color: #fbf3ea;
-      }
-      .categoryWise .flex-container .cont::-webkit-scrollbar-thumb{
-        background-color: #ee6545;
-        border-radius: 40px;
-      }
-      .categoryWise .cont .card{
-        width: 15rem !important;
-      }
-    .categoryWise .cont .card .card-body{
-        background-color: #fbf3ea;
-    }
-    .categoryWise .cont .card .card-body .card-title{
-        font-size: 22px;
-    }
-    .categoryWise .cont .card .card-body .card-{}
-    .categoryWise .cont .none{
-        color: gray;
-        text-align: center;
-    }
-    .categoryWise .flex-container .featured{
-        width: 100%;
-    }
-    .categoryWise .flex-container .featured form input{
-        width: 100%;
-        padding: 6px;
-        font-size: 18px;
-        border: 2px solid #ee6545;
-        outline: 0;
-        border-radius: 5px;
-    }
-    .categoryWise .flex-container .featured h3{
-        border-bottom: 3px solid #ee6545;
-        margin-top: 30px;
-        font-size: 26px;
-        padding-bottom: 10px;
-    }
-    .categoryWise .flex-container .featured .div{
-        display: none !important;
-    }
-    .categoryWise .flex-container .featured .post-cont{
-        border-bottom: 1px solid gray;
-    }
-    .categoryWise .flex-container .featured .post-cont .flex{
-        display: flex;
-        justify-content: space-between;
-        color: gray;
-        margin-top: -10px;
-    }
+  .featured-posts h3 {
+    font-size: 20px;
+  }
 }

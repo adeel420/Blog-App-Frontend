@@ -44,28 +44,33 @@ const Blogs = () => {
   return (
     <div className="blogs-cont">
       <h3 className="title">Blogs</h3>
+
       <div className="flex-container">
+        {/* LEFT: Blog List */}
         <div className="cont">
           {filteredBlogs && filteredBlogs.length > 0 ? (
             filteredBlogs.map((blog) => (
               <Link
                 to={`/detail/${blog.title}`}
-                style={{ textDecoration: "wavy" }}
                 key={blog._id}
+                className="blog-card"
               >
-                <div className="card" style={{ width: "38rem" }}>
-                  <img src={blog.image} className="card-img-top" alt="..." />
+                <div className="card">
+                  <div className="card-image">
+                    <img src={blog.image} alt={blog.title} />
+                  </div>
                   <div className="card-body">
                     <h5 className="card-title">
-                      {blog.title.length > 40
-                        ? `${blog.title.substring(0, 40)}...`
+                      {blog.title.length > 60
+                        ? `${blog.title.substring(0, 60)}...`
                         : blog.title}
                     </h5>
                     <p className="card-text">
-                      {blog.description.length > 300
-                        ? `${blog.description.substring(0, 300)}...`
+                      {blog.description.length > 200
+                        ? `${blog.description.substring(0, 200)}...`
                         : blog.description}
                     </p>
+                    <button className="read-more">Read More →</button>
                   </div>
                 </div>
               </Link>
@@ -73,8 +78,9 @@ const Blogs = () => {
           ) : (
             <h3 className="none">No Blogs here...</h3>
           )}
-          <Footer />
         </div>
+
+        {/* RIGHT: Featured Posts */}
         <div className="featured">
           <form>
             <input
@@ -84,20 +90,21 @@ const Blogs = () => {
               onChange={(e) => setInput(e.target.value)}
             />
           </form>
-          <div className="div">
+
+          <div className="featured-posts">
             <h3>Featured Posts</h3>
             {posts.map((post, index) => (
-              <div className="post-cont" key={index}>
-                <p>{post.title}</p>
-                <div className="flex">
-                  <p>{post.views} views</p>
-                  <p>
+              <div className="post-card" key={index}>
+                <p className="post-title">{post.title}</p>
+                <div className="post-meta">
+                  <span>{post.views} views</span>
+                  <span>
                     {new Date().toLocaleDateString("en-US", {
                       year: "numeric",
-                      month: "long",
+                      month: "short",
                       day: "numeric",
                     })}
-                  </p>
+                  </span>
                 </div>
               </div>
             ))}

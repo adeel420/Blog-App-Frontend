@@ -1,91 +1,177 @@
-.createBlogs{
-    margin-bottom: 40px;
-    margin-top: 30px;
+/* ---------- Container ---------- */
+.createBlogs {
+  margin: 40px 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
 }
-.createBlogs .title{
-    text-align: center;
-    color: #ee6545;
-    font-weight: bold;
+
+/* ---------- Title ---------- */
+.createBlogs .title {
+  text-align: center;
+  color: #ee6545;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 25px;
+  letter-spacing: 0.4px;
 }
-.createBlogs .createForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px 0;
-    margin-top: 30px;
+
+/* ---------- Form ---------- */
+.createBlogs .createForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+  background: #fffaf7;
+  padding: 30px 25px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 700px;
+  margin-inline: auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
-.createBlogs .createForm .select{
-    width: 600px;
-    border: 2px solid #ee6545;
-    padding:0px;
-    outline: 0;
-    border-radius: 5px;
-    font-size: 18px;
+
+/* ---------- Select Dropdown ---------- */
+.createBlogs .createForm .select {
+  width: 100%;
+  font-size: 16px;
+  border: 2px solid #ee6545 !important;
+  border-radius: 8px !important;
+  transition: 0.3s ease;
 }
-.createBlogs .createForm label{
-    width: 600px;
-    border: 2px solid #ee6545;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px;
-    outline: 0;
-    color: #ee6545;
-    border-radius: 5px;
+
+.createBlogs .createForm .select:hover {
+  box-shadow: 0 0 8px rgba(238, 101, 69, 0.2);
 }
-.createBlogs .createForm label:hover{
-    background-color: #ee6545;
-    color: white;
+
+/* ---------- File Upload ---------- */
+.createBlogs .createForm .file-upload {
+  width: 100%;
+  border: 2px dashed #ee6545;
+  font-size: 16px;
+  color: #ee6545;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.createBlogs .createForm input{
-    width: 600px;
-    border: 2px solid #ee6545;
-    font-size: 18px;
-    padding: 6px;
-    outline: 0;
-    border-radius: 5px;
+
+.createBlogs .createForm .file-upload:hover {
+  background-color: #ee6545;
+  color: #fff;
 }
-.createBlogs .createForm .textarea{
-    width: 600px;
-    border: 2px solid #ee6545;
-    font-size: 18px;
-    padding: 6px;
-    outline: 0;
-    height: 200px;
-    position: relative;
-    border-radius: 5px;
+
+/* ---------- Image Preview ---------- */
+.createBlogs .createForm .preview {
+  display: flex;
+  justify-content: center;
 }
-.createBlogs .createForm .textarea textarea{
-    width: 580px;
-    border: none;    
-    resize: none;
-    outline: 0;
+
+.createBlogs .createForm .preview img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #ee6545;
+  box-shadow: 0 4px 15px rgba(238, 101, 69, 0.2);
 }
-.createBlogs .createForm .textarea button{
-    position: absolute;
-    right: 15px;
-    background-color: #ee6545;
+
+/* ---------- Input ---------- */
+.createBlogs .createForm input[type="text"] {
+  width: 100%;
+  border: 2px solid #ee6545;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.createBlogs .createForm input[type="text"]:focus {
+  box-shadow: 0 0 8px rgba(238, 101, 69, 0.3);
+}
+
+/* ---------- Textarea ---------- */
+.createBlogs .createForm .textarea {
+  position: relative;
+  width: 100%;
+  border: 2px solid #ee6545;
+  border-radius: 8px;
+  padding: 10px;
+  height: 200px;
+  transition: 0.3s ease;
+  background: #fff;
+}
+
+.createBlogs .createForm .textarea textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  color: #333;
+}
+
+.createBlogs .createForm .textarea button {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background-color: #ee6545;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.createBlogs .createForm .textarea button:hover {
+  background-color: #c94f33;
+  transform: scale(1.05);
+}
+
+/* ---------- Submit Button ---------- */
+.createBlogs .createForm .submit {
+  width: 100%;
+  background-color: #ee6545;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.createBlogs .createForm .submit:hover {
+  background-color: #d45136;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(238, 101, 69, 0.25);
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 768px) {
+  .createBlogs .createForm {
+    padding: 25px 20px;
+    width: 95%;
+  }
+
+  .createBlogs .createForm .preview img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .createBlogs .createForm .textarea {
+    height: 180px;
+  }
+
+  .createBlogs .createForm .submit {
     font-size: 16px;
-    padding: 8px;
-    color: white;
-    border: none;
-    border-radius: 40px;
-    bottom: 15px;
-}
-.createBlogs .createForm .textarea button:hover{
-    background-color: #ca553b;
-}
-.createBlogs .createForm .submit{
-    background-color: #ee6545;
-    font-size: 18px;
-    padding: 8px;
-    color: white;
-    width: 600px;
-    border: none;
-    border-radius: 10px;
-}
-.createBlogs .createForm .submit:hover{
-    background-color: #ca553b;
+    padding: 10px;
+  }
 }

@@ -44,16 +44,19 @@ const CategoryWise = () => {
       <h3 className="title">
         Category: <span>{category}</span>
       </h3>
+
       <div className="flex-container">
+        {/* Left: Blogs */}
         <div className="cont">
           {filteredBlogs && filteredBlogs.length > 0 ? (
             filteredBlogs.map((blog) => (
               <Link
                 to={`/detail/${blog.title}`}
-                style={{ textDecoration: "wavy" }}
+                key={blog._id}
+                className="blog-card"
               >
-                <div className="card" style={{ width: "42rem" }} key={blog._id}>
-                  <img src={blog.image} className="card-img-top" alt="..." />
+                <div className="card">
+                  <img src={blog.image} className="card-img" alt={blog.title} />
                   <div className="card-body">
                     <h5 className="card-title">
                       {blog.title.length > 40
@@ -61,13 +64,12 @@ const CategoryWise = () => {
                         : blog.title}
                     </h5>
                     <p className="card-text">
-                      {blog.description.length > 300
-                        ? `${blog.description.substring(0, 300)}...`
+                      {blog.description.length > 150
+                        ? `${blog.description.substring(0, 150)}...`
                         : blog.description}
                     </p>
-                    <p>
-                      <span style={{ fontWeight: "bold" }}>Category:</span>{" "}
-                      {category}
+                    <p className="card-category">
+                      <span>Category:</span> {category}
                     </p>
                   </div>
                 </div>
@@ -77,6 +79,8 @@ const CategoryWise = () => {
             <h3 className="none">No Blogs here...</h3>
           )}
         </div>
+
+        {/* Right: Featured */}
         <div className="featured">
           <form>
             <input
@@ -86,17 +90,18 @@ const CategoryWise = () => {
               onChange={(e) => setInput(e.target.value)}
             />
           </form>
-          <div className="div">
+
+          <div className="featured-posts">
             <h3>Featured Posts</h3>
             {posts.map((post, index) => (
-              <div className="post-cont" key={index}>
-                <p>{post.title}</p>
-                <div className="flex">
+              <div className="post-card" key={index}>
+                <p className="post-title">{post.title}</p>
+                <div className="post-meta">
                   <p>{post.views} views</p>
                   <p>
                     {new Date().toLocaleDateString("en-US", {
                       year: "numeric",
-                      month: "long",
+                      month: "short",
                       day: "numeric",
                     })}
                   </p>

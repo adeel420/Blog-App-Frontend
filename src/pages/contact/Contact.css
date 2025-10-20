@@ -1,147 +1,215 @@
-.contact-cont{
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    min-height: 80vh;
+/* ---------- Base Container ---------- */
+.contact-cont {
+  margin: 60px 80px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
-.contact-cont .title{
-    text-align: center;
-    color: #ee6545;
-    font-weight: bold;
+
+/* ---------- Hero Section ---------- */
+.contact-cont .hero-section {
+  background: #fbf3ea;
+  border-radius: 18px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 8px 25px -10px rgba(238, 101, 69, 0.15);
+  max-width: 1200px;
+  width: 100%;
 }
-.contact-cont .hero-section{
-    background-color: #fbf3ea;
-    height: 80vh;
-    margin-top: 15px;
-    display: flex;
+
+.contact-cont .hero-section .title {
+  font-size: 42px;
+  color: #ee6545;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-cont .hero-section .title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #ee6545;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.contact-cont .hero-section p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ---------- Flex Container (Map + Info) ---------- */
+.contact-cont .flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 80px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ---------- Map Section ---------- */
+.contact-cont iframe {
+  flex: 1.2;
+  height: 420px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contact-cont iframe:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- Contact Info ---------- */
+.contact-cont .text {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 40px 35px;
+  box-shadow: 0 8px 25px -10px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.contact-cont .text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px -10px rgba(238, 101, 69, 0.25);
+}
+
+.contact-cont .text h3 {
+  color: #ee6545;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #ee6545;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.contact-cont .text .cont {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-cont .text .cont label {
+  font-weight: 600;
+  font-size: 18px;
+  color: #222;
+}
+
+.contact-cont .text .cont p {
+  font-size: 17px;
+  color: #444;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 10px;
+}
+
+.contact-cont .text .cont p span {
+  font-size: 28px;
+  color: #ee6545;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-cont .text .cont p span:hover {
+  color: #ff7a5c;
+  transform: translateY(-3px);
+}
+
+/* ---------- Large Screens (≥1600px) ---------- */
+@media screen and (min-width: 1600px) {
+  .contact-cont {
+    margin: 80px 100px;
+  }
+  .contact-cont .hero-section .title {
+    font-size: 52px;
+  }
+  .contact-cont .hero-section p {
+    font-size: 20px;
+  }
+  .contact-cont iframe {
+    height: 500px;
+  }
+}
+
+/* ---------- Tablets (≤1024px) ---------- */
+@media screen and (max-width: 1024px) {
+  .contact-cont {
+    margin: 40px;
+  }
+  .contact-cont .flex-container {
     flex-direction: column;
-    justify-content: center;
+    gap: 50px;
     align-items: center;
-    border-radius: 10px;
-    padding: 15px;
+  }
+  .contact-cont iframe,
+  .contact-cont .text {
+    width: 100%;
+  }
+  .contact-cont iframe {
+    height: 380px;
+  }
 }
-.contact-cont .hero-section .title{
-    color: #ee6545;
-    font-size: 36px;
-    font-weight: bold;
-}
-.contact-cont .hero-section p{
-    color: gray;
-    width: 800px;
-    text-align: center;
-}
-.contact-cont .flex-container{
-    display: flex;
-    margin-top: 50px;
-    gap: 0px 100px;
-}
-.contact-cont .flex-container .text h3{
-    color: #ee6545;
-    font-weight: bold;
-}
-.contact-cont .flex-container .text .cont{
-    margin-top: 30px;
-}
-.contact-cont .flex-container .text .cont label{
-    font-weight: bold;
-    font-size: 20px;
-}
-.contact-cont .flex-container .text .cont p{
-    font-size: 20px;
-    margin-top: 10px;
-    display: flex;
-    gap: 0px 20px;
-    margin-left: 60px;
-}
-.contact-cont .flex-container .text .cont p span{
+
+/* ---------- Mobile (≤600px) ---------- */
+@media screen and (max-width: 600px) {
+  .contact-cont {
+    margin: 20px;
+  }
+
+  .contact-cont .hero-section {
+    padding: 35px 20px;
+  }
+
+  .contact-cont .hero-section .title {
     font-size: 30px;
-    cursor: pointer;
-}
+  }
 
-@media screen and (min-width: 2000px) and (max-width: 2560px){
-    .contact-cont{
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-    .contact-cont .title{
-        font-size: 70px !important;
-    }
-    .contact-cont .hero-section{
-        margin-top: 35px;
-        display: flex;
-    }
-    .contact-cont .hero-section .title{
-        color: #ee6545;
-        font-size: 36px;
-        font-weight: bold;
-    }
-    .contact-cont .hero-section p{
-        font-size: 42px;
-        width: 1400px !important;
-        margin-top: 10px !important;
-    }
-}
+  .contact-cont .hero-section p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
 
-@media screen and (min-width: 1080px) and (max-width: 1800px){
-    .contact-cont{
-        margin-top: 30px;
-        margin-left: 40px;
-        margin-right: 40px;
-        margin-bottom: 40px;
-        min-height: 80vh;
-    }
-    .contact-cont .title{
-        text-align: center;
-        color: #ee6545;
-        font-weight: bold;
-    }
-    .contact-cont .hero-section{
-        background-color: #fbf3ea;
-        height: 80vh;
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        padding: 15px;
-    }
-    .contact-cont .hero-section .title{
-        color: #ee6545;
-        font-size: 36px;
-        font-weight: bold;
-    }
-    .contact-cont .hero-section p{
-        color: gray;
-        width: 800px;
-        text-align: center;
-    }
-    .contact-cont .flex-container{
-        display: flex;
-        margin-top: 50px;
-        gap: 0px 100px;
-    }
-    .contact-cont .flex-container .text h3{
-        color: #ee6545;
-        font-weight: bold;
-    }
-    .contact-cont .flex-container .text .cont{
-        margin-top: 30px;
-    }
-    .contact-cont .flex-container .text .cont label{
-        font-weight: bold;
-        font-size: 20px;
-    }
-    .contact-cont .flex-container .text .cont p{
-        font-size: 20px;
-        margin-top: 10px;
-        display: flex;
-        gap: 0px 20px;
-        margin-left: 60px;
-    }
-    .contact-cont .flex-container .text .cont p span{
-        font-size: 30px;
-        cursor: pointer;
-    }
+  .contact-cont .flex-container {
+    margin-top: 50px;
+    gap: 30px;
+  }
+
+  .contact-cont iframe {
+    height: 260px;
+  }
+
+  .contact-cont .text {
+    padding: 25px 20px;
+  }
+
+  .contact-cont .text h3 {
+    font-size: 20px;
+  }
+
+  .contact-cont .text .cont label {
+    font-size: 16px;
+  }
+
+  .contact-cont .text .cont p {
+    font-size: 15px;
+  }
+
+  .contact-cont .text .cont p span {
+    font-size: 22px;
+  }
 }

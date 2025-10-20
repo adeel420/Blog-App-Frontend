@@ -1,288 +1,231 @@
-.about-cont{
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    min-height: 80vh;
-}
-.about-cont .title{
-    text-align: center;
-    color: #ee6545;
-    font-weight: bold;
-}
-.about-cont .hero-section{
-    background-color: #fbf3ea;
-    height: 80vh;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 15px;
-}
-.about-cont .hero-section .title{
-    color: #ee6545;
-    font-size: 36px;
-    font-weight: bold;
-}
-.about-cont .hero-section p{
-    color: gray;
-    width: 800px;
-    text-align: center;
-}
-.about-cont .container{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 80px;
-    gap: 0px 30px;
-}
-.about-cont .container .cont{
-    display: flex;
-    padding: 15px;
-    border-radius: 5px;
-    flex-direction: column;
-    box-shadow: 0px 10px 20px -10px black;
-    align-items: center;
-}
-.about-cont .container .cont h3{
-    color: #ee6545;
-    text-decoration: underline;
-    font-weight: bold;
-}
-.about-cont .container .cont p{
-    text-align: center;
-}
-.about-cont .getTouch-cont{
-    margin-top: 80px;
-}
-.about-cont .getTouch-cont h3{
-    color: #ee6545;
-    font-weight: bold;
+.about-cont {
+  margin: 40px;
+  min-height: 80vh;
+  font-family: "Poppins", sans-serif;
 }
 
-@media screen and (min-width: 2000px) and (max-width: 2560px){
-    .about-cont{
-        margin-left: 80px;
-        margin-right: 80px;
-    }
-    .about-cont .title{
-        font-size: 70px !important;
-    }
-    .about-cont .hero-section{
-        margin-top: 35px;
-        display: flex;
-    }
-    .about-cont .hero-section .title{
-        color: #ee6545;
-        font-size: 36px;
-        font-weight: bold;
-    }
-    .about-cont .hero-section p{
-        font-size: 42px;
-        width: 1400px !important;
-        margin-top: 10px !important;
-    }
-    .about-cont .container{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 180px;
-        gap: 0 100px;
-    }
-    .about-cont .container .cont{
-        display: flex;
-        padding: 35px;
-        width: 1200px !important;
-        border-radius: 5px;
-        flex-direction: column;
-        box-shadow: 0px 10px 20px -10px black;
-        align-items: center;
-    }
-    .about-cont .container .cont h3{
-        color: #ee6545;
-        text-decoration: underline;
-        font-weight: bold;
-    }
-    .about-cont .container .cont p{
-        text-align: center;
-    }
-    .about-cont .getTouch-cont{
-        margin-top: 180px;
-    }
-    .about-cont .getTouch-cont h3{
-        font-size: 52px !important;
-    }
-    .about-cont .getTouch-cont p{
-        font-size: 32px;
-    }
+/* ---------- Hero Section ---------- */
+.about-cont .hero-section {
+  background: linear-gradient(145deg, #fff5ef, #ffe8db);
+  height: 70vh;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0px 8px 25px -12px rgba(238, 101, 69, 0.25);
 }
 
-@media screen and (min-width: 1080px) and (max-width: 1800px){
-    .about-cont{
-        margin-top: 30px;
-        margin-left: 40px;
-        margin-right: 40px;
-        margin-bottom: 40px;
-        min-height: 80vh;
-    }
-    .about-cont .title{
-        text-align: center;
-        color: #ee6545;
-        font-weight: bold;
-    }
-    .about-cont .hero-section{
-        background-color: #fbf3ea;
-        height: 80vh;
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        padding: 15px;
-    }
-    .about-cont .hero-section .title{
-        color: #ee6545;
-        font-size: 36px;
-        font-weight: bold;
-    }
-    .about-cont .hero-section p{
-        color: gray;
-        width: 800px;
-        text-align: center;
-    }
-    .about-cont .container{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 80px;
-        gap: 0px 30px;
-    }
-    .about-cont .container .cont{
-        display: flex;
-        padding: 15px;
-        border-radius: 5px;
-        flex-direction: column;
-        box-shadow: 0px 10px 20px -10px black;
-        align-items: center;
-    }
-    .about-cont .container .cont h3{
-        color: #ee6545;
-        text-decoration: underline;
-        font-weight: bold;
-    }
-    .about-cont .container .cont p{
-        text-align: center;
-    }
-    .about-cont .getTouch-cont{
-        margin-top: 80px;
-    }
-    .about-cont .getTouch-cont h3{
-        color: #ee6545;
-        font-weight: bold;
-    }
+.about-cont .hero-section .title {
+  color: #ee6545;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 18px;
 }
 
-@media screen and (max-width: 768px){
-    .about-cont .hero-section p{
-        width: 400px;
-    }
-    .about-cont .container{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 80px;
-        gap: 0px 20px;
-    }
-    .about-cont .container .cont{
-        display: flex;
-        padding: 15px;
-        border-radius: 5px;
-        width: 450px !important;
-        flex-direction: column;
-        box-shadow: 0px 10px 20px -10px black;
-        align-items: center;
-    }
-    .about-cont .container .cont h3{
-        font-size: 18px !important;
-    }
-    .about-cont .container .cont p{
-        font-size: 14px !important;
-        text-align: start;
-    }
+.about-cont .hero-section p {
+  color: #555;
+  max-width: 800px;
+  line-height: 1.7;
+  font-size: 18px;
 }
 
-@media screen and (max-width: 425px){
-    .about-cont .hero-section p{
-        width: 250px !important;
-        font-size: 12px !important;
-    }
-    .about-cont .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 80px;
-        gap: 30px 0px;
-    }
-    .about-cont .container .cont{
-        display: flex;
-        padding: 15px;
-        border-radius: 5px;
-        flex-direction: column;
-        box-shadow: 0px 10px 20px -10px black;
-        align-items: center;
-        width: 300px !important;
-    }
+/* ---------- Info Cards Section ---------- */
+.about-cont .container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 100px;
+  justify-content: center;
 }
 
-@media screen and (max-width: 375px){
-    .about-cont .hero-section p{
-        width: 250px !important;
-        font-size: 12px !important;
-    }
-    .about-cont .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 80px;
-        gap: 30px 0px;
-    }
-    .about-cont .container .cont{
-        display: flex;
-        padding: 15px;
-        border-radius: 5px;
-        flex-direction: column;
-        box-shadow: 0px 10px 20px -10px black;
-        align-items: center;
-        width: 270px !important;
-    }
+.about-cont .container .cont {
+  background: linear-gradient(to bottom, #fff, #fff5f1);
+  border-top: 6px solid #ee6545;
+  border-radius: 14px;
+  box-shadow: 0px 8px 20px -10px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 320px;
 }
 
-@media screen and (max-width: 350px){
-    .about-cont{
-        margin-top: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 40px;
-        min-height: 80vh;
-    }
-    .about-cont .hero-section p{
-        width: 250px !important;
-        font-size: 12px !important;
-    }
-    .about-cont .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 80px;
-        gap: 30px 0px;
-    }
-    .about-cont .container .cont{
-        display: flex;
-        padding: 15px;
-        border-radius: 5px;
-        flex-direction: column;
-        justify-content: center !important;
-        box-shadow: 0px 10px 20px -10px black;
-        align-items: center;
-        width: 270px !important;
-    }
+.about-cont .container .cont:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 25px -10px rgba(238, 101, 69, 0.3);
+  background: linear-gradient(to bottom, #fff, #fdf2ec);
+}
+
+.about-cont .container .cont::before {
+  content: "✦";
+  color: #ee6545;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.about-cont .container .cont h3 {
+  color: #ee6545;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.about-cont .container .cont p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+/* ---------- Get in Touch Section ---------- */
+.about-cont .getTouch-cont {
+  margin-top: 100px;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #fff5ef, #ffe8db);
+  box-shadow: 0px 8px 25px -12px rgba(238, 101, 69, 0.25);
+}
+
+.about-cont .getTouch-cont h3 {
+  color: #ee6545;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.about-cont .getTouch-cont p {
+  font-size: 17px;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.about-cont .getTouch-cont button {
+  background-color: #ee6545;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-cont .getTouch-cont button:hover {
+  background-color: #d04f31;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px -5px rgba(238, 101, 69, 0.4);
+}
+
+/* ---------- Large Screens ---------- */
+@media screen and (min-width: 2000px) {
+  .about-cont {
+    margin: 80px;
+  }
+
+  .about-cont .hero-section {
+    height: 60vh;
+  }
+
+  .about-cont .hero-section .title {
+    font-size: 60px;
+  }
+
+  .about-cont .hero-section p {
+    font-size: 28px;
+    max-width: 1200px;
+  }
+
+  .about-cont .container {
+    gap: 60px;
+  }
+
+  .about-cont .container .cont {
+    padding: 50px;
+  }
+
+  .about-cont .getTouch-cont h3 {
+    font-size: 40px;
+  }
+
+  .about-cont .getTouch-cont p {
+    font-size: 24px;
+  }
+}
+
+/* ---------- Tablets ---------- */
+@media screen and (max-width: 1024px) {
+  .about-cont .hero-section {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .about-cont .hero-section p {
+    max-width: 600px;
+    font-size: 16px;
+  }
+
+  .about-cont .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-cont .container .cont {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .about-cont .getTouch-cont {
+    padding: 40px 20px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media screen and (max-width: 700px) {
+  .about-cont {
+    margin: 20px;
+  }
+
+  .about-cont .hero-section .title {
+    font-size: 30px;
+  }
+
+  .about-cont .hero-section p {
+    max-width: 350px;
+    font-size: 14px;
+  }
+
+  .about-cont .container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .about-cont .container .cont {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about-cont .getTouch-cont h3 {
+    font-size: 22px;
+  }
+
+  .about-cont .getTouch-cont p {
+    font-size: 14px;
+  }
+
+  .about-cont .getTouch-cont button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }

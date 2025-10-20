@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { handleError, handleSuccess } from "../../components/Utils";
 import { Toaster } from "react-hot-toast";
+import { FaLock, FaEnvelope } from "react-icons/fa";
 import "./Login.css";
 
 const Login = () => {
@@ -54,28 +55,45 @@ const Login = () => {
   return (
     <div className="login-cont">
       <Toaster />
-      <div className="container">
-        <h3>Login</h3>
+      <div className="login-card">
+        <h3>Welcome Back 👋</h3>
+        <p className="subtitle">Log in to continue your WordSmith journey</p>
         <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            name="email"
-            value={loginInfo.email}
-            onChange={handleChange}
-            placeholder="Email"
-          />
-          <input
-            type="password"
-            name="password"
-            value={loginInfo.password}
-            onChange={handleChange}
-            placeholder="Password"
-          />
-          <button type="submit">Login</button>
-          <span>
+          <div className="input-box">
+            <FaEnvelope className="icon" />
+            <input
+              type="email"
+              name="email"
+              value={loginInfo.email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              required
+            />
+          </div>
+
+          <div className="input-box">
+            <FaLock className="icon" />
+            <input
+              type="password"
+              name="password"
+              value={loginInfo.password}
+              onChange={handleChange}
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <button type="submit" className="login-btn">
+            Log In
+          </button>
+
+          <span className="signup-text">
             Don’t have an account?{" "}
-            <NavLink to="/signup" style={{ color: "#ee6545" }}>
-              Signup
+            <NavLink
+              to="/signup"
+              style={{ color: "#ee6545", fontWeight: "600" }}
+            >
+              Sign Up
             </NavLink>
           </span>
         </form>
